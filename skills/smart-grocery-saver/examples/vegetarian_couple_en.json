@@ -1,0 +1,14 @@
+{
+  "household": {"adults": 2},
+  "budget": {"weekly": 150},
+  "meals": {"breakfast": 5, "dinner": 7},
+  "diet": {"restrictions": ["vegetarian", "no_spicy"]},
+  "pantry": [{"ingredient": "rice", "qty": 2000}, {"ingredient": "milk", "qty": 500}],
+  "coupons": [
+    {"type": "threshold_off", "store": "app_b", "threshold": 59, "amount": 8, "label": "App B 59-8"},
+    {"type": "percent_off", "store": "*", "ingredients": ["tofu"], "percent": 20}
+  ],
+  "stores": {"max_stores": 1},
+  "start_date": "2026-11-23",
+  "output": {"lang": "en"}
+}

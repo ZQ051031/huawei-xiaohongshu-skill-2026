@@ -1,0 +1,11 @@
+{
+  "household": {"adults": 1},
+  "budget": {"weekly": 60},
+  "meals": {"breakfast": 7, "dinner": 7},
+  "dishes_per_meal": 1,
+  "diet": {"restrictions": ["no_beef"]},
+  "pantry": ["大米:2000", "挂面:500"],
+  "coupon_texts": ["app_b: 满39减5", "示例菜市场：青菜立减1元"],
+  "stores": {"max_stores": 1, "extra_store_cost": 3},
+  "start_date": "2026-11-23"
+}

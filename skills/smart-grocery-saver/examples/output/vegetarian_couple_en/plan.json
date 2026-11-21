@@ -1,0 +1,916 @@
+{
+  "skill": "smart-grocery-saver",
+  "version": "1.0.0",
+  "data_notice": {
+    "is_sample": true,
+    "en": "SAMPLE DATA ONLY: store names and prices are illustrative placeholders for demo/testing, NOT real or current prices of any real store. Edit them (CSV or JSON) to match the stores you actually use.",
+    "zh": "示例数据：商店名称与价格均为演示用的虚构数值，并非任何真实商店的真实或当前价格。请按你常去的商店修改（CSV 或 JSON）。"
+  },
+  "request": {
+    "portions_per_meal": 2.0,
+    "household": {
+      "adults": 2,
+      "children": 0,
+      "child_portion": 0.6
+    },
+    "meals": {
+      "breakfast": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "lunch": [],
+      "dinner": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "dishes_per_meal": 2,
+    "forbidden_tags": [
+      "beef",
+      "chicken",
+      "fish",
+      "pork",
+      "shellfish",
+      "spicy"
+    ],
+    "stores_allowed": [
+      "market_a",
+      "wet_market",
+      "app_b"
+    ],
+    "max_stores": 1,
+    "start_date": "2026-11-23",
+    "lang": "en"
+  },
+  "summary": {
+    "currency": "CNY",
+    "total": 98.78,
+    "budget": 150.0,
+    "remaining": 51.22,
+    "status": "within_budget",
+    "baseline_total": 130.4,
+    "savings_total": 31.62,
+    "savings_pct": 24.2,
+    "meals": 12,
+    "cost_per_portion": 4.12,
+    "stores_used": [
+      "app_b"
+    ],
+    "budget_mode": false
+  },
+  "meal_plan": [
+    {
+      "day": 1,
+      "date": "2026-11-23",
+      "weekday": "Mon",
+      "meal": "breakfast",
+      "meal_label": "Breakfast",
+      "dishes": [
+        {
+          "recipe_id": "millet_congee_cucumber",
+          "name": "Millet congee with cucumber salad",
+          "role": "breakfast",
+          "minutes": 25,
+          "est_cost": 2.56
+        }
+      ],
+      "est_cost": 2.56
+    },
+    {
+      "day": 1,
+      "date": "2026-11-23",
+      "weekday": "Mon",
+      "meal": "dinner",
+      "meal_label": "Dinner",
+      "dishes": [
+        {
+          "recipe_id": "tomato_tofu",
+          "name": "Tomato braised tofu",
+          "role": "main",
+          "minutes": 20,
+          "est_cost": 5.48
+        },
+        {
+          "recipe_id": "smashed_cucumber",
+          "name": "Smashed cucumber salad",
+          "role": "side",
+          "minutes": 5,
+          "est_cost": 2.93
+        },
+        {
+          "recipe_id": "steamed_rice",
+          "name": "Steamed rice",
+          "role": "staple",
+          "minutes": 30,
+          "est_cost": 0.0
+        }
+      ],
+      "est_cost": 8.41
+    },
+    {
+      "day": 2,
+      "date": "2026-11-24",
+      "weekday": "Tue",
+      "meal": "breakfast",
+      "meal_label": "Breakfast",
+      "dishes": [
+        {
+          "recipe_id": "millet_congee_egg",
+          "name": "Millet congee with boiled egg",
+          "role": "breakfast",
+          "minutes": 25,
+          "est_cost": 3.03
+        }
+      ],
+      "est_cost": 3.03
+    },
+    {
+      "day": 2,
+      "date": "2026-11-24",
+      "weekday": "Tue",
+      "meal": "dinner",
+      "meal_label": "Dinner",
+      "dishes": [
+        {
+          "recipe_id": "tomato_egg",
+          "name": "Tomato & egg stir-fry",
+          "role": "main",
+          "minutes": 15,
+          "est_cost": 5.79
+        },
+        {
+          "recipe_id": "stir_fried_bean_sprouts",
+          "name": "Stir-fried bean sprouts",
+          "role": "side",
+          "minutes": 8,
+          "est_cost": 3.17
+        },
+        {
+          "recipe_id": "steamed_rice",
+          "name": "Steamed rice",
+          "role": "staple",
+          "minutes": 30,
+          "est_cost": 0.0
+        }
+      ],
+      "est_cost": 8.96
+    },
+    {
+      "day": 3,
+      "date": "2026-11-25",
+      "weekday": "Wed",
+      "meal": "breakfast",
+      "meal_label": "Breakfast",
+      "dishes": [
+        {
+          "recipe_id": "millet_congee_cucumber",
+          "name": "Millet congee with cucumber salad",
+          "role": "breakfast",
+          "minutes": 25,
+          "est_cost": 2.56
+        }
+      ],
+      "est_cost": 2.56
+    },
+    {
+      "day": 3,
+      "date": "2026-11-25",
+      "weekday": "Wed",
+      "meal": "dinner",
+      "meal_label": "Dinner",
+      "dishes": [
+        {
+          "recipe_id": "homestyle_tofu",
+          "name": "Home-style tofu",
+          "role": "main",
+          "minutes": 20,
+          "est_cost": 5.97
+        },
+        {
+          "recipe_id": "smashed_cucumber",
+          "name": "Smashed cucumber salad",
+          "role": "side",
+          "minutes": 5,
+          "est_cost": 2.93
+        },
+        {
+          "recipe_id": "steamed_rice",
+          "name": "Steamed rice",
+          "role": "staple",
+          "minutes": 30,
+          "est_cost": 0.0
+        }
+      ],
+      "est_cost": 8.9
+    },
+    {
+      "day": 4,
+      "date": "2026-11-26",
+      "weekday": "Thu",
+      "meal": "breakfast",
+      "meal_label": "Breakfast",
+      "dishes": [
+        {
+          "recipe_id": "millet_congee_egg",
+          "name": "Millet congee with boiled egg",
+          "role": "breakfast",
+          "minutes": 25,
+          "est_cost": 3.03
+        }
+      ],
+      "est_cost": 3.03
+    },
+    {
+      "day": 4,
+      "date": "2026-11-26",
+      "weekday": "Thu",
+      "meal": "dinner",
+      "meal_label": "Dinner",
+      "dishes": [
+        {
+          "recipe_id": "tomato_egg",
+          "name": "Tomato & egg stir-fry",
+          "role": "main",
+          "minutes": 15,
+          "est_cost": 5.79
+        },
+        {
+          "recipe_id": "stir_fried_bok_choy",
+          "name": "Stir-fried bok choy",
+          "role": "side",
+          "minutes": 8,
+          "est_cost": 3.35
+        },
+        {
+          "recipe_id": "steamed_rice",
+          "name": "Steamed rice",
+          "role": "staple",
+          "minutes": 30,
+          "est_cost": 0.0
+        }
+      ],
+      "est_cost": 9.14
+    },
+    {
+      "day": 5,
+      "date": "2026-11-27",
+      "weekday": "Fri",
+      "meal": "breakfast",
+      "meal_label": "Breakfast",
+      "dishes": [
+        {
+          "recipe_id": "egg_noodles",
+          "name": "Egg & greens noodles",
+          "role": "breakfast",
+          "minutes": 12,
+          "est_cost": 4.77
+        }
+      ],
+      "est_cost": 4.77
+    },
+    {
+      "day": 5,
+      "date": "2026-11-27",
+      "weekday": "Fri",
+      "meal": "dinner",
+      "meal_label": "Dinner",
+      "dishes": [
+        {
+          "recipe_id": "tomato_tofu",
+          "name": "Tomato braised tofu",
+          "role": "main",
+          "minutes": 20,
+          "est_cost": 5.48
+        },
+        {
+          "recipe_id": "carrot_corn",
+          "name": "Corn & carrot medley",
+          "role": "side",
+          "minutes": 12,
+          "est_cost": 2.57
+        },
+        {
+          "recipe_id": "steamed_rice",
+          "name": "Steamed rice",
+          "role": "staple",
+          "minutes": 30,
+          "est_cost": 0.0
+        }
+      ],
+      "est_cost": 8.05
+    },
+    {
+      "day": 6,
+      "date": "2026-11-28",
+      "weekday": "Sat",
+      "meal": "dinner",
+      "meal_label": "Dinner",
+      "dishes": [
+        {
+          "recipe_id": "homestyle_tofu",
+          "name": "Home-style tofu",
+          "role": "main",
+          "minutes": 20,
+          "est_cost": 5.97
+        },
+        {
+          "recipe_id": "stir_fried_bean_sprouts",
+          "name": "Stir-fried bean sprouts",
+          "role": "side",
+          "minutes": 8,
+          "est_cost": 3.17
+        },
+        {
+          "recipe_id": "steamed_rice",
+          "name": "Steamed rice",
+          "role": "staple",
+          "minutes": 30,
+          "est_cost": 0.0
+        }
+      ],
+      "est_cost": 9.14
+    },
+    {
+      "day": 7,
+      "date": "2026-11-29",
+      "weekday": "Sun",
+      "meal": "dinner",
+      "meal_label": "Dinner",
+      "dishes": [
+        {
+          "recipe_id": "carrot_egg",
+          "name": "Carrot & egg stir-fry",
+          "role": "main",
+          "minutes": 15,
+          "est_cost": 4.27
+        },
+        {
+          "recipe_id": "carrot_corn",
+          "name": "Corn & carrot medley",
+          "role": "side",
+          "minutes": 12,
+          "est_cost": 2.57
+        },
+        {
+          "recipe_id": "steamed_rice",
+          "name": "Steamed rice",
+          "role": "staple",
+          "minutes": 30,
+          "est_cost": 0.0
+        }
+      ],
+      "est_cost": 6.84
+    }
+  ],
+  "shopping_list": {
+    "stores": [
+      {
+        "store": "app_b",
+        "name": "Sample Grocery App B",
+        "items": [
+          {
+            "ingredient": "garlic",
+            "name": "garlic",
+            "unit": "g",
+            "need": 42,
+            "bought_qty": 200.0,
+            "packs": [
+              {
+                "label": "大蒜 200g",
+                "pack_qty": 200.0,
+                "count": 1,
+                "unit_price": 3.9,
+                "free": 0
+              }
+            ],
+            "list_cost": 3.9,
+            "cost": 3.9,
+            "coupons": [],
+            "category": "aromatic"
+          },
+          {
+            "ingredient": "scallion",
+            "name": "scallion",
+            "unit": "g",
+            "need": 66,
+            "bought_qty": 150.0,
+            "packs": [
+              {
+                "label": "小葱 150g",
+                "pack_qty": 150.0,
+                "count": 1,
+                "unit_price": 2.5,
+                "free": 0
+              }
+            ],
+            "list_cost": 2.5,
+            "cost": 2.5,
+            "coupons": [],
+            "category": "aromatic"
+          },
+          {
+            "ingredient": "millet",
+            "name": "millet",
+            "unit": "g",
+            "need": 320,
+            "bought_qty": 500.0,
+            "packs": [
+              {
+                "label": "小米 500g",
+                "pack_qty": 500.0,
+                "count": 1,
+                "unit_price": 6.5,
+                "free": 0
+              }
+            ],
+            "list_cost": 6.5,
+            "cost": 6.5,
+            "coupons": [],
+            "category": "grain"
+          },
+          {
+            "ingredient": "noodles",
+            "name": "noodles",
+            "unit": "g",
+            "need": 160,
+            "bought_qty": 800.0,
+            "packs": [
+              {
+                "label": "挂面 800g",
+                "pack_qty": 800.0,
+                "count": 1,
+                "unit_price": 9.9,
+                "free": 0
+              }
+            ],
+            "list_cost": 9.9,
+            "cost": 9.9,
+            "coupons": [],
+            "category": "grain"
+          },
+          {
+            "ingredient": "egg",
+            "name": "eggs",
+            "unit": "pcs",
+            "need": 15,
+            "bought_qty": 20.0,
+            "packs": [
+              {
+                "label": "鸡蛋 20枚",
+                "pack_qty": 20.0,
+                "count": 1,
+                "unit_price": 19.9,
+                "free": 0
+              }
+            ],
+            "list_cost": 19.9,
+            "cost": 19.9,
+            "coupons": [],
+            "category": "protein"
+          },
+          {
+            "ingredient": "tofu",
+            "name": "firm tofu",
+            "unit": "g",
+            "need": 1200,
+            "bought_qty": 1400.0,
+            "packs": [
+              {
+                "label": "北豆腐 350g",
+                "pack_qty": 350.0,
+                "count": 4,
+                "unit_price": 3.9,
+                "free": 0
+              }
+            ],
+            "list_cost": 15.6,
+            "cost": 12.48,
+            "coupons": [
+              {
+                "id": "c2",
+                "label": "北豆腐 8折"
+              }
+            ],
+            "category": "protein"
+          },
+          {
+            "ingredient": "bean_sprouts",
+            "name": "bean sprouts",
+            "unit": "g",
+            "need": 720,
+            "bought_qty": 900.0,
+            "packs": [
+              {
+                "label": "绿豆芽 300g",
+                "pack_qty": 300.0,
+                "count": 3,
+                "unit_price": 2.5,
+                "free": 0
+              }
+            ],
+            "list_cost": 7.5,
+            "cost": 7.5,
+            "coupons": [],
+            "category": "vegetable"
+          },
+          {
+            "ingredient": "bok_choy",
+            "name": "bok choy",
+            "unit": "g",
+            "need": 440,
+            "bought_qty": 800.0,
+            "packs": [
+              {
+                "label": "小青菜 400g",
+                "pack_qty": 400.0,
+                "count": 2,
+                "unit_price": 3.5,
+                "free": 0
+              }
+            ],
+            "list_cost": 7.0,
+            "cost": 7.0,
+            "coupons": [],
+            "category": "vegetable"
+          },
+          {
+            "ingredient": "carrot",
+            "name": "carrot",
+            "unit": "g",
+            "need": 440,
+            "bought_qty": 500.0,
+            "packs": [
+              {
+                "label": "胡萝卜 500g",
+                "pack_qty": 500.0,
+                "count": 1,
+                "unit_price": 3.2,
+                "free": 0
+              }
+            ],
+            "list_cost": 3.2,
+            "cost": 3.2,
+            "coupons": [],
+            "category": "vegetable"
+          },
+          {
+            "ingredient": "corn",
+            "name": "sweet corn",
+            "unit": "g",
+            "need": 400,
+            "bought_qty": 500.0,
+            "packs": [
+              {
+                "label": "甜玉米 500g",
+                "pack_qty": 500.0,
+                "count": 1,
+                "unit_price": 4.5,
+                "free": 0
+              }
+            ],
+            "list_cost": 4.5,
+            "cost": 4.5,
+            "coupons": [],
+            "category": "vegetable"
+          },
+          {
+            "ingredient": "cucumber",
+            "name": "cucumber",
+            "unit": "g",
+            "need": 920,
+            "bought_qty": 1000.0,
+            "packs": [
+              {
+                "label": "黄瓜 500g",
+                "pack_qty": 500.0,
+                "count": 2,
+                "unit_price": 4.5,
+                "free": 0
+              }
+            ],
+            "list_cost": 9.0,
+            "cost": 9.0,
+            "coupons": [],
+            "category": "vegetable"
+          },
+          {
+            "ingredient": "green_pepper",
+            "name": "green pepper",
+            "unit": "g",
+            "need": 160,
+            "bought_qty": 300.0,
+            "packs": [
+              {
+                "label": "青椒 300g",
+                "pack_qty": 300.0,
+                "count": 1,
+                "unit_price": 3.5,
+                "free": 0
+              }
+            ],
+            "list_cost": 3.5,
+            "cost": 3.5,
+            "coupons": [],
+            "category": "vegetable"
+          },
+          {
+            "ingredient": "mushroom",
+            "name": "shiitake mushroom",
+            "unit": "g",
+            "need": 160,
+            "bought_qty": 200.0,
+            "packs": [
+              {
+                "label": "香菇 200g",
+                "pack_qty": 200.0,
+                "count": 1,
+                "unit_price": 5.9,
+                "free": 0
+              }
+            ],
+            "list_cost": 5.9,
+            "cost": 5.9,
+            "coupons": [],
+            "category": "vegetable"
+          },
+          {
+            "ingredient": "tomato",
+            "name": "tomato",
+            "unit": "g",
+            "need": 960,
+            "bought_qty": 1000.0,
+            "packs": [
+              {
+                "label": "番茄 500g",
+                "pack_qty": 500.0,
+                "count": 2,
+                "unit_price": 5.5,
+                "free": 0
+              }
+            ],
+            "list_cost": 11.0,
+            "cost": 11.0,
+            "coupons": [],
+            "category": "vegetable"
+          }
+        ],
+        "list_subtotal": 109.9,
+        "subtotal": 106.78,
+        "order_discounts": [
+          {
+            "id": "c1",
+            "label": "App B 59-8",
+            "amount": 8.0
+          }
+        ],
+        "delivery_fee": 0.0,
+        "total": 98.78
+      }
+    ],
+    "unavailable": [],
+    "check_pantry_staples": [
+      {
+        "ingredient": "oil",
+        "name": "cooking oil"
+      },
+      {
+        "ingredient": "salt",
+        "name": "salt"
+      },
+      {
+        "ingredient": "soy_sauce",
+        "name": "soy sauce"
+      },
+      {
+        "ingredient": "starch",
+        "name": "corn starch"
+      },
+      {
+        "ingredient": "sugar",
+        "name": "sugar"
+      },
+      {
+        "ingredient": "vinegar",
+        "name": "vinegar"
+      }
+    ]
+  },
+  "pantry_used": [
+    {
+      "ingredient": "rice",
+      "name": "rice",
+      "qty": 1260.0,
+      "unit": "g"
+    }
+  ],
+  "leftovers": [
+    {
+      "ingredient": "egg",
+      "name": "eggs",
+      "qty": 5.0,
+      "unit": "pcs",
+      "perishable": true,
+      "est_value": 4.98
+    },
+    {
+      "ingredient": "bok_choy",
+      "name": "bok choy",
+      "qty": 360.0,
+      "unit": "g",
+      "perishable": true,
+      "est_value": 3.15
+    },
+    {
+      "ingredient": "tofu",
+      "name": "firm tofu",
+      "qty": 200.0,
+      "unit": "g",
+      "perishable": true,
+      "est_value": 1.78
+    },
+    {
+      "ingredient": "green_pepper",
+      "name": "green pepper",
+      "qty": 140.0,
+      "unit": "g",
+      "perishable": true,
+      "est_value": 1.63
+    },
+    {
+      "ingredient": "bean_sprouts",
+      "name": "bean sprouts",
+      "qty": 180.0,
+      "unit": "g",
+      "perishable": true,
+      "est_value": 1.5
+    },
+    {
+      "ingredient": "scallion",
+      "name": "scallion",
+      "qty": 84.0,
+      "unit": "g",
+      "perishable": true,
+      "est_value": 1.4
+    },
+    {
+      "ingredient": "mushroom",
+      "name": "shiitake mushroom",
+      "qty": 40.0,
+      "unit": "g",
+      "perishable": true,
+      "est_value": 1.18
+    },
+    {
+      "ingredient": "corn",
+      "name": "sweet corn",
+      "qty": 100.0,
+      "unit": "g",
+      "perishable": true,
+      "est_value": 0.9
+    },
+    {
+      "ingredient": "cucumber",
+      "name": "cucumber",
+      "qty": 80.0,
+      "unit": "g",
+      "perishable": true,
+      "est_value": 0.72
+    },
+    {
+      "ingredient": "tomato",
+      "name": "tomato",
+      "qty": 40.0,
+      "unit": "g",
+      "perishable": true,
+      "est_value": 0.44
+    },
+    {
+      "ingredient": "carrot",
+      "name": "carrot",
+      "qty": 60.0,
+      "unit": "g",
+      "perishable": true,
+      "est_value": 0.38
+    },
+    {
+      "ingredient": "noodles",
+      "name": "noodles",
+      "qty": 640.0,
+      "unit": "g",
+      "perishable": false,
+      "est_value": 7.92
+    },
+    {
+      "ingredient": "garlic",
+      "name": "garlic",
+      "qty": 158.0,
+      "unit": "g",
+      "perishable": false,
+      "est_value": 3.08
+    },
+    {
+      "ingredient": "millet",
+      "name": "millet",
+      "qty": 180.0,
+      "unit": "g",
+      "perishable": false,
+      "est_value": 2.34
+    },
+    {
+      "ingredient": "rice",
+      "name": "rice",
+      "qty": 740.0,
+      "unit": "g",
+      "perishable": false,
+      "est_value": 0.0
+    }
+  ],
+  "savings": {
+    "baseline_total": 130.4,
+    "final_total": 98.78,
+    "steps": [
+      {
+        "key": "pantry",
+        "label": "Use pantry first",
+        "amount": 16.9
+      },
+      {
+        "key": "stores",
+        "label": "Smart store split",
+        "amount": 3.6
+      },
+      {
+        "key": "item_coupons",
+        "label": "Item coupons & promos",
+        "amount": 3.12
+      },
+      {
+        "key": "order_coupons",
+        "label": "Order coupons & delivery",
+        "amount": 8.0
+      }
+    ],
+    "baseline_definition": "Same meal plan bought at your default store (cheapest pack combination), ignoring your pantry and all coupons."
+  },
+  "coupons": {
+    "used": [
+      {
+        "id": "c2",
+        "label": "北豆腐 8折",
+        "store": "app_b"
+      },
+      {
+        "id": "c1",
+        "label": "App B 59-8",
+        "store": "app_b"
+      }
+    ],
+    "unused": []
+  },
+  "excluded_recipes": {
+    "kung_pao_chicken": "diet: chicken,spicy",
+    "green_pepper_pork": "diet: pork",
+    "sweet_sour_ribs": "diet: pork",
+    "beef_potato": "diet: beef",
+    "steamed_fish": "diet: fish",
+    "boiled_shrimp": "diet: shellfish",
+    "mapo_tofu": "diet: pork,spicy",
+    "mushroom_chicken": "diet: chicken",
+    "eggplant_minced_pork": "diet: pork",
+    "beef_onion": "diet: beef",
+    "braised_chicken_thigh": "diet: chicken",
+    "shrimp_egg": "diet: shellfish",
+    "chicken_broccoli": "diet: chicken",
+    "pork_bean_sprouts": "diet: pork",
+    "hot_sour_potato": "diet: spicy",
+    "corn_rib_soup": "diet: pork"
+  },
+  "warnings": [],
+  "outputs": {
+    "markdown": "# Weekly grocery savings plan\n> ⚠️ SAMPLE DATA ONLY: store names and prices are illustrative placeholders for demo/testing, NOT real or current prices of any real store. Edit them (CSV or JSON) to match the stores you actually use.\n\n| Item | Value |\n|---|---|\n| Portions per meal (adult equiv.) | 2 |\n| Meals at home | 12 |\n| Weekly budget | ¥150.00 |\n| Optimised spend | ¥98.78 |\n| Budget status | ✅ within budget, ¥51.22 left |\n| Unoptimised baseline | ¥130.40 |\n| Total saved | ¥31.62 (24.2%) |\n| Per portion | ¥4.12 |\n\n## Where the savings come from\n- Use pantry first: ¥16.90\n- Smart store split: ¥3.60\n- Item coupons & promos: ¥3.12\n- Order coupons & delivery: ¥8.00\n- Baseline: Same meal plan bought at your default store (cheapest pack combination), ignoring your pantry and all coupons.\n\n## Meal plan\n| Day | Meal | Dishes | Est. cost |\n|---|---|---|---|\n| Mon 11-23 | Breakfast | Millet congee with cucumber salad | ¥2.56 |\n| Mon 11-23 | Dinner | Tomato braised tofu, Smashed cucumber salad, Steamed rice | ¥8.41 |\n| Tue 11-24 | Breakfast | Millet congee with boiled egg | ¥3.03 |\n| Tue 11-24 | Dinner | Tomato & egg stir-fry, Stir-fried bean sprouts, Steamed rice | ¥8.96 |\n| Wed 11-25 | Breakfast | Millet congee with cucumber salad | ¥2.56 |\n| Wed 11-25 | Dinner | Home-style tofu, Smashed cucumber salad, Steamed rice | ¥8.90 |\n| Thu 11-26 | Breakfast | Millet congee with boiled egg | ¥3.03 |\n| Thu 11-26 | Dinner | Tomato & egg stir-fry, Stir-fried bok choy, Steamed rice | ¥9.14 |\n| Fri 11-27 | Breakfast | Egg & greens noodles | ¥4.77 |\n| Fri 11-27 | Dinner | Tomato braised tofu, Corn & carrot medley, Steamed rice | ¥8.05 |\n| Sat 11-28 | Dinner | Home-style tofu, Stir-fried bean sprouts, Steamed rice | ¥9.14 |\n| Sun 11-29 | Dinner | Carrot & egg stir-fry, Corn & carrot medley, Steamed rice | ¥6.84 |\n\n## Shopping list\n### Sample Grocery App B — ¥98.78\n| Item | Need | Buy | List → paid | Deals |\n|---|---|---|---|---|\n| garlic | 42g | 大蒜 200g ×1 | ¥3.90 → ¥3.90 | — |\n| scallion | 66g | 小葱 150g ×1 | ¥2.50 → ¥2.50 | — |\n| millet | 320g | 小米 500g ×1 | ¥6.50 → ¥6.50 | — |\n| noodles | 160g | 挂面 800g ×1 | ¥9.90 → ¥9.90 | — |\n| eggs | 15枚 | 鸡蛋 20枚 ×1 | ¥19.90 → ¥19.90 | — |\n| firm tofu | 1.2kg | 北豆腐 350g ×4 | ¥15.60 → ¥12.48 | 北豆腐 8折 |\n| bean sprouts | 720g | 绿豆芽 300g ×3 | ¥7.50 → ¥7.50 | — |\n| bok choy | 440g | 小青菜 400g ×2 | ¥7.00 → ¥7.00 | — |\n| carrot | 440g | 胡萝卜 500g ×1 | ¥3.20 → ¥3.20 | — |\n| sweet corn | 400g | 甜玉米 500g ×1 | ¥4.50 → ¥4.50 | — |\n| cucumber | 920g | 黄瓜 500g ×2 | ¥9.00 → ¥9.00 | — |\n| green pepper | 160g | 青椒 300g ×1 | ¥3.50 → ¥3.50 | — |\n| shiitake mushroom | 160g | 香菇 200g ×1 | ¥5.90 → ¥5.90 | — |\n| tomato | 960g | 番茄 500g ×2 | ¥11.00 → ¥11.00 | — |\n\nSubtotal ¥106.78; App B 59-8 −¥8.00\n\n**Check you have these staples (not costed):** cooking oil, salt, soy sauce, corn starch, sugar, vinegar\n\n## Pantry used\n- rice 1.26kg\n\n## Leftovers (use first next week)\n- eggs 5枚 (perishable)\n- bok choy 360g (perishable)\n- firm tofu 200g (perishable)\n- green pepper 140g (perishable)\n- bean sprouts 180g (perishable)\n- scallion 84g (perishable)\n- shiitake mushroom 40g (perishable)\n- sweet corn 100g (perishable)\n- cucumber 80g (perishable)\n- tomato 40g (perishable)\n- carrot 60g (perishable)\n- noodles 640g\n- garlic 158g\n- millet 180g\n- rice 740g\n",
+    "xiaohongshu_note": {
+      "title": "¥99 week, saved ¥32",
+      "body": "💰This week: 2 people · 12 home meals · paid ¥98.78 (budget ¥150)\n📉Saved ¥31.62 (24.2%) vs. unoptimised shopping, ¥4.12 per portion\n\n✨How I saved\n1. Use pantry first: ¥16.90\n2. Order coupons & delivery: ¥8.00\n3. Smart store split: ¥3.60\n4. Item coupons & promos: ¥3.12\n\n🍳Dinners\nMon: Tomato braised tofu + Smashed cucumber salad\nTue: Tomato & egg stir-fry + Stir-fried bean sprouts\nWed: Home-style tofu + Smashed cucumber salad\nThu: Tomato & egg stir-fry + Stir-fried bok choy\nFri: Tomato braised tofu + Corn & carrot medley\nSat: Home-style tofu + Stir-fried bean sprouts\nSun: Carrot & egg stir-fry + Corn & carrot medley\n\n💬How much does your weekly shop cost? Share your best trick in the comments!\n(Prices are sample data - check your local store.)\n\n#grocerysavings #mealplan #budgetcooking #coupons",
+      "hashtags": [
+        "#grocerysavings",
+        "#mealplan",
+        "#budgetcooking",
+        "#coupons"
+      ],
+      "title_chars": 19,
+      "body_chars": 800,
+      "limits": {
+        "title": 20,
+        "body": 1000
+      }
+    }
+  }
+}

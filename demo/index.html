@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart Grocery Saver · 省钱买菜助手</title>
+<style>
+:root{--red:#ff2442;--ink:#222;--mute:#777;--line:#eee;--bg:#fafafa}
+*{box-sizing:border-box}body{margin:0;font:14px/1.5 -apple-system,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:var(--bg)}
+header{background:#fff;border-bottom:1px solid var(--line);padding:14px 24px;display:flex;align-items:center;gap:12px}
+header h1{font-size:18px;margin:0}header .tag{background:var(--red);color:#fff;border-radius:10px;padding:1px 8px;font-size:12px}
+.notice{background:#fff7e6;border:1px solid #ffd591;color:#874d00;padding:8px 24px;font-size:13px}
+main{display:grid;grid-template-columns:380px 1fr;gap:20px;padding:20px 24px;max-width:1400px;margin:auto}
+@media(max-width:900px){main{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:16px}
+.card h2{font-size:15px;margin:0 0 10px}label{display:block;font-size:12px;color:var(--mute);margin:8px 0 2px}
+input,select,textarea{width:100%;padding:7px 9px;border:1px solid #ddd;border-radius:8px;font:inherit}textarea{min-height:70px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}.row2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+button{background:var(--red);color:#fff;border:0;border-radius:20px;padding:9px 18px;font:inherit;font-weight:600;cursor:pointer}
+button.ghost{background:#fff;color:var(--red);border:1px solid var(--red)}button:disabled{opacity:.5}
+.checks{display:flex;flex-wrap:wrap;gap:6px 12px}.checks label{display:flex;gap:4px;align-items:center;color:var(--ink);margin:0;font-size:13px}.checks input{width:auto}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.stat{background:var(--bg);border-radius:10px;padding:10px}
+.stat b{display:block;font-size:20px}.stat span{font-size:12px;color:var(--mute)}.good{color:#389e0d}.bad{color:#cf1322}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:6px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--mute);font-weight:500}
+.bar{height:8px;background:var(--red);border-radius:4px}.pill{display:inline-block;background:#fff0f2;color:var(--red);border-radius:8px;padding:0 6px;font-size:12px;margin:1px}
+.note{max-width:420px;border:1px solid var(--line);border-radius:14px;overflow:hidden}.note .cover{background:linear-gradient(135deg,#ff2442,#ff7a45);color:#fff;padding:22px;font-size:20px;font-weight:700}
+.note pre{white-space:pre-wrap;font:inherit;margin:0;padding:14px}.err{background:#fff1f0;border:1px solid #ffa39e;color:#a8071a;padding:10px;border-radius:8px;white-space:pre-wrap}
+.tabs{display:flex;gap:6px;margin-bottom:10px}.tabs button{background:#f0f0f0;color:var(--ink);font-weight:500}.tabs button.on{background:var(--red);color:#fff}
+.muted{color:var(--mute);font-size:12px}
+</style>
+</head>
+<body>
+<header><h1>🛒 Smart Grocery Saver · 省钱买菜助手</h1><span class="tag">小红书 Skill</span></header>
+<div class="notice" id="notice">⚠️ 示例数据：商店名称与价格均为演示用虚构数值，并非任何真实商店的价格。可在左侧“我的价格表”中改成你常去商店的真实价格。</div>
+<main>
+<section>
+  <div class="card"><h2>👨‍👩‍👧 家庭与预算</h2>
+    <div class="row"><div><label>成人</label><input id="adults" type="number" min="0" value="2"></div>
+      <div><label>儿童</label><input id="children" type="number" min="0" value="1"></div>
+      <div><label>周预算 ¥</label><input id="budget" type="number" min="1" value="220"></div></div>
+    <div class="row"><div><label>早餐天数</label><input id="breakfast" type="number" min="0" max="7" value="7"></div>
+      <div><label>午餐天数</label><input id="lunch" type="number" min="0" max="7" value="2"></div>
+      <div><label>晚餐天数</label><input id="dinner" type="number" min="0" max="7" value="7"></div></div>
+    <div class="row2"><div><label>每餐菜数</label><select id="dishes"><option value="1">1 主菜</option><option value="2" selected>2 主菜+素菜</option><option value="3">3 +汤</option></select></div>
+      <div><label>开始日期</label><input id="start" type="date"></div></div>
+  </div>
+  <div class="card"><h2>🥗 饮食需求</h2>
+    <div class="checks" id="restrictions"></div>
+    <label>过敏（逗号分隔，如 花生, 虾）</label><input id="allergies" value="花生">
+    <label>不吃的食材/菜</label><input id="dislikes" value="">
+    <label>想吃的菜（评论区点单）</label><input id="favorites" value="番茄炒蛋">
+  </div>
+  <div class="card"><h2>🧺 家里存货（每行 食材:数量，单位 g/ml/枚）</h2>
+    <textarea id="pantry">大米:3000
+鸡蛋:4
+土豆:500</textarea></div>
+  <div class="card"><h2>🎟️ 优惠券（直接粘贴，每行一张）</h2>
+    <textarea id="coupons">示例超市A：满100减15
+示例超市A：鸡蛋 第二件半价
+app_b: 牛奶 买2送1
+wet_market: 豆腐 8折</textarea>
+    <div class="row2"><div><label>最多去几家店</label><input id="maxStores" type="number" min="1" max="3" value="2"></div>
+      <div><label>平时常去</label><select id="defaultStore"></select></div></div>
+    <label>多跑一家店的“时间成本” ¥</label><input id="extraStore" type="number" min="0" value="0">
+  </div>
+  <div class="card"><h2>🏷️ 我的价格表（可选，CSV）</h2>
+    <p class="muted">点“载入示例价格表”，改 price 列为你的真实价格（可删行/加包装规格）。留空则用示例价格。</p>
+    <textarea id="prices" placeholder="store,ingredient,name_zh,name_en,unit,pack_qty,price,label"></textarea>
+    <button class="ghost" id="loadPrices" type="button">载入示例价格表</button>
+  </div>
+  <div class="card"><div class="checks"><label><input type="checkbox" id="contest" checked>笔记加比赛话题</label><label><input type="checkbox" id="en">English output</label></div>
+    <p></p><button id="go">生成一周省钱方案</button> <button class="ghost" id="reset" type="button">示例</button></div>
+</section>
+<section id="out"><div class="card"><h2>结果</h2><p class="muted">填写左侧信息后点“生成一周省钱方案”。</p></div></section>
+</main>
+<script>
+const R={vegetarian:"素食",vegan:"纯素",pescatarian:"鱼素",no_pork:"不吃猪肉",no_beef:"不吃牛肉",no_seafood:"不吃海鲜",gluten_free:"无麸质",lactose_free:"无乳糖",egg_free:"不吃蛋",no_spicy:"不吃辣"};
+const $=id=>document.getElementById(id);
+const el=(tag,props={},...kids)=>{const e=document.createElement(tag);Object.assign(e,props);for(const k of kids)e.append(k);return e;};
+const money=x=>"¥"+Number(x).toFixed(2);
+const qty=(q,u)=>u==="pcs"?Math.round(q)+"枚":Math.round(q)+u;
+for(const [k,v] of Object.entries(R)){$("restrictions").append(el("label",{},el("input",{type:"checkbox",value:k}),v));}
+$("start").value=new Date().toISOString().slice(0,10);
+fetch("/api/catalog").then(r=>r.json()).then(c=>{for(const s of c.stores)$("defaultStore").append(el("option",{value:s.id,textContent:s.name_zh}));});
+$("loadPrices").onclick=()=>fetch("/api/prices.csv").then(r=>r.text()).then(t=>$("prices").value=t);
+$("reset").onclick=()=>location.reload();
+const list=s=>s.split(/[,，、\n]/).map(x=>x.trim()).filter(Boolean);
+function request(){
+  return {household:{adults:+$("adults").value,children:+$("children").value},budget:{weekly:+$("budget").value},
+    meals:{breakfast:+$("breakfast").value,lunch:+$("lunch").value,dinner:+$("dinner").value},dishes_per_meal:+$("dishes").value,
+    diet:{restrictions:[...document.querySelectorAll("#restrictions input:checked")].map(i=>i.value),allergies:list($("allergies").value),dislikes:list($("dislikes").value),favorites:list($("favorites").value)},
+    pantry:$("pantry").value.split("\n").map(x=>x.trim()).filter(Boolean),coupon_texts:$("coupons").value.split("\n").map(x=>x.trim()).filter(Boolean),
+    stores:{max_stores:+$("maxStores").value,default_store:$("defaultStore").value||null,extra_store_cost:+$("extraStore").value},
+    start_date:$("start").value||null,output:{lang:$("en").checked?"en":"zh",include_contest_tags:$("contest").checked}};
+}
+$("go").onclick=async()=>{
+  $("go").disabled=true;
+  try{const r=await fetch("/api/plan",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({request:request(),prices_csv:$("prices").value.trim()||null})});
+    const d=await r.json(); r.ok?render(d):showErr(d.errors||[d.error]);}catch(e){showErr([String(e)]);} finally{$("go").disabled=false;}
+};
+function showErr(errs){$("out").replaceChildren(el("div",{className:"card"},el("h2",{textContent:"输入有误"}),el("div",{className:"err",textContent:errs.join("\n")})));}
+function table(head,rows){const t=el("table");t.append(el("tr",{},...head.map(h=>el("th",{textContent:h}))));for(const r of rows)t.append(el("tr",{},...r.map(c=>c instanceof Node?el("td",{},c):el("td",{textContent:c}))));return t;}
+function render(d){
+  const s=d.summary,out=$("out");out.replaceChildren();
+  const st=(v,l,c="")=>el("div",{className:"stat"},el("b",{className:c,textContent:v}),el("span",{textContent:l}));
+  out.append(el("div",{className:"card"},el("h2",{textContent:"📊 本周结果"}),el("div",{className:"stats"},
+    st(money(s.total),"优化后花费（预算 "+money(s.budget)+"）",s.status==="within_budget"?"good":"bad"),
+    st(money(s.savings_total),"比不优化省 "+s.savings_pct+"%","good"),st(money(s.cost_per_portion),"人均每餐"),st(s.meals+" 顿","在家吃饭"))));
+  const max=Math.max(...d.savings.steps.map(x=>x.amount),0.01);
+  out.append(el("div",{className:"card"},el("h2",{textContent:"💡 省钱明细（基准 "+money(d.savings.baseline_total)+"）"}),
+    table(["来源","金额",""],d.savings.steps.map(x=>[x.label,money(x.amount),el("div",{className:"bar",style:"width:"+(100*x.amount/max)+"%"})])),
+    el("p",{className:"muted",textContent:d.savings.baseline_definition})));
+  const tabs=el("div",{className:"tabs"}),body=el("div");
+  const views={"🍳 菜单":()=>table(["日期","餐次","菜品","成本"],d.meal_plan.map(m=>[m.weekday+" "+m.date.slice(5),m.meal_label,m.dishes.map(x=>x.name).join("、"),money(m.est_cost)])),
+    "🛒 购物清单":()=>{const w=el("div");for(const so of d.shopping_list.stores){w.append(el("h3",{textContent:so.name+" · "+money(so.total)}),
+        table(["食材","需要","购买","原价→到手","优惠"],so.items.map(i=>[i.name,qty(i.need,i.unit),i.packs.map(p=>p.label+"×"+p.count+(p.free?"(赠"+p.free+")":"")).join(" + "),money(i.list_cost)+" → "+money(i.cost),el("span",{},...i.coupons.map(c=>el("span",{className:"pill",textContent:c.label})))])));
+        const ex=so.order_discounts.map(o=>o.label+" −"+money(o.amount));if(so.delivery_fee)ex.push("配送费 +"+money(so.delivery_fee));w.append(el("p",{className:"muted",textContent:"小计 "+money(so.subtotal)+(ex.length?"；"+ex.join("；"):"")}));}
+      if(d.shopping_list.check_pantry_staples.length)w.append(el("p",{className:"muted",textContent:"请确认家里有："+d.shopping_list.check_pantry_staples.map(x=>x.name).join("、")}));return w;},
+    "🎟️ 优惠券":()=>table(["券","状态"],[...d.coupons.used.map(c=>[c.label,"✅ 已用"]),...d.coupons.unused.map(c=>[c.label,"— "+(c.reason||"")])]),
+    "♻️ 存货/剩余":()=>table(["食材","数量","类型"],[...d.pantry_used.map(p=>[p.name,qty(p.qty,p.unit),"用掉的存货"]),...d.leftovers.map(l=>[l.name,qty(l.qty,l.unit),l.perishable?"剩余（易坏，优先用）":"剩余"])]),
+    "📝 Markdown":()=>el("pre",{style:"white-space:pre-wrap",textContent:d.outputs.markdown})};
+  for(const k of Object.keys(views)){const b=el("button",{textContent:k,type:"button"});b.onclick=()=>{tabs.querySelectorAll("button").forEach(x=>x.classList.remove("on"));b.classList.add("on");body.replaceChildren(views[k]());};tabs.append(b);}
+  out.append(el("div",{className:"card"},tabs,body));tabs.firstChild.click();
+  const n=d.outputs.xiaohongshu_note,copy=el("button",{textContent:"复制笔记",type:"button"});
+  copy.onclick=()=>navigator.clipboard.writeText(n.title+"\n\n"+n.body).then(()=>copy.textContent="已复制 ✓");
+  out.append(el("div",{className:"card"},el("h2",{textContent:"📕 小红书笔记（标题 "+n.title_chars+"/"+n.limits.title+" 字，正文 "+n.body_chars+"/"+n.limits.body+" 字）"}),
+    el("div",{className:"note"},el("div",{className:"cover",textContent:n.title}),el("pre",{textContent:n.body})),el("p"),copy));
+  if(d.warnings.length)out.append(el("div",{className:"card"},el("h2",{textContent:"⚠️ 提示"}),...d.warnings.map(w=>el("p",{textContent:w}))));
+  if(d.budget_tips)out.append(el("div",{className:"card"},el("h2",{textContent:"💰 预算建议"}),...d.budget_tips.map(w=>el("p",{textContent:w}))));
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,1454 @@
+{
+ "_notice": "SAMPLE DATA ONLY: store names and prices are illustrative placeholders for demo/testing, NOT real or current prices of any real store. Edit them (CSV or JSON) to match the stores you actually use.",
+ "_notice_zh": "示例数据：商店名称与价格均为演示用的虚构数值，并非任何真实商店的真实或当前价格。请按你常去的商店修改（CSV 或 JSON）。",
+ "is_sample": true,
+ "currency": "CNY",
+ "version": "2026.11-sample",
+ "stores": [
+  {
+   "id": "market_a",
+   "name_zh": "示例超市A",
+   "name_en": "Sample Supermarket A",
+   "type": "supermarket",
+   "delivery_fee": 0,
+   "free_delivery_threshold": 0
+  },
+  {
+   "id": "wet_market",
+   "name_zh": "示例菜市场",
+   "name_en": "Sample Wet Market",
+   "type": "wet_market",
+   "delivery_fee": 0,
+   "free_delivery_threshold": 0
+  },
+  {
+   "id": "app_b",
+   "name_zh": "示例买菜App B",
+   "name_en": "Sample Grocery App B",
+   "type": "delivery_app",
+   "delivery_fee": 6,
+   "free_delivery_threshold": 59
+  }
+ ],
+ "ingredients": {
+  "rice": {
+   "name_zh": "大米",
+   "name_en": "rice",
+   "unit": "g",
+   "category": "grain",
+   "tags": [],
+   "perishable": false,
+   "pantry_staple": false,
+   "aliases": [
+    "米",
+    "白米",
+    "米饭"
+   ]
+  },
+  "noodles": {
+   "name_zh": "挂面",
+   "name_en": "noodles",
+   "unit": "g",
+   "category": "grain",
+   "tags": [
+    "gluten"
+   ],
+   "perishable": false,
+   "pantry_staple": false,
+   "aliases": [
+    "面条",
+    "面"
+   ]
+  },
+  "oats": {
+   "name_zh": "燕麦片",
+   "name_en": "rolled oats",
+   "unit": "g",
+   "category": "grain",
+   "tags": [
+    "gluten"
+   ],
+   "perishable": false,
+   "pantry_staple": false,
+   "aliases": [
+    "燕麦",
+    "麦片"
+   ]
+  },
+  "bread": {
+   "name_zh": "吐司面包",
+   "name_en": "sliced bread",
+   "unit": "g",
+   "category": "grain",
+   "tags": [
+    "gluten"
+   ],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": [
+    "吐司",
+    "面包"
+   ]
+  },
+  "millet": {
+   "name_zh": "小米",
+   "name_en": "millet",
+   "unit": "g",
+   "category": "grain",
+   "tags": [],
+   "perishable": false,
+   "pantry_staple": false,
+   "aliases": []
+  },
+  "egg": {
+   "name_zh": "鸡蛋",
+   "name_en": "eggs",
+   "unit": "pcs",
+   "category": "protein",
+   "tags": [
+    "egg"
+   ],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": [
+    "蛋",
+    "土鸡蛋"
+   ]
+  },
+  "tofu": {
+   "name_zh": "北豆腐",
+   "name_en": "firm tofu",
+   "unit": "g",
+   "category": "protein",
+   "tags": [
+    "soy"
+   ],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": [
+    "豆腐"
+   ]
+  },
+  "pork_lean": {
+   "name_zh": "猪里脊",
+   "name_en": "pork loin",
+   "unit": "g",
+   "category": "meat",
+   "tags": [
+    "pork"
+   ],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": [
+    "里脊",
+    "猪肉",
+    "瘦肉"
+   ]
+  },
+  "pork_ribs": {
+   "name_zh": "猪肋排",
+   "name_en": "pork ribs",
+   "unit": "g",
+   "category": "meat",
+   "tags": [
+    "pork"
+   ],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": [
+    "排骨",
+    "肋排"
+   ]
+  },
+  "minced_pork": {
+   "name_zh": "猪肉末",
+   "name_en": "minced pork",
+   "unit": "g",
+   "category": "meat",
+   "tags": [
+    "pork"
+   ],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": [
+    "肉末",
+    "猪肉馅",
+    "肉馅"
+   ]
+  },
+  "chicken_breast": {
+   "name_zh": "鸡胸肉",
+   "name_en": "chicken breast",
+   "unit": "g",
+   "category": "meat",
+   "tags": [
+    "chicken"
+   ],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": [
+    "鸡胸"
+   ]
+  },
+  "chicken_thigh": {
+   "name_zh": "去骨鸡腿肉",
+   "name_en": "boneless chicken thigh",
+   "unit": "g",
+   "category": "meat",
+   "tags": [
+    "chicken"
+   ],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": [
+    "鸡腿",
+    "鸡腿肉",
+    "鸡肉"
+   ]
+  },
+  "beef": {
+   "name_zh": "牛腩",
+   "name_en": "beef brisket",
+   "unit": "g",
+   "category": "meat",
+   "tags": [
+    "beef"
+   ],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": [
+    "牛肉"
+   ]
+  },
+  "fish_fillet": {
+   "name_zh": "巴沙鱼柳",
+   "name_en": "basa fish fillet",
+   "unit": "g",
+   "category": "seafood",
+   "tags": [
+    "fish"
+   ],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": [
+    "鱼",
+    "鱼柳",
+    "鱼片"
+   ]
+  },
+  "shrimp": {
+   "name_zh": "虾仁",
+   "name_en": "peeled shrimp",
+   "unit": "g",
+   "category": "seafood",
+   "tags": [
+    "shellfish"
+   ],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": [
+    "虾"
+   ]
+  },
+  "milk": {
+   "name_zh": "纯牛奶",
+   "name_en": "milk",
+   "unit": "ml",
+   "category": "dairy",
+   "tags": [
+    "dairy"
+   ],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": [
+    "牛奶",
+    "奶"
+   ]
+  },
+  "tomato": {
+   "name_zh": "番茄",
+   "name_en": "tomato",
+   "unit": "g",
+   "category": "vegetable",
+   "tags": [],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": [
+    "西红柿"
+   ]
+  },
+  "potato": {
+   "name_zh": "土豆",
+   "name_en": "potato",
+   "unit": "g",
+   "category": "vegetable",
+   "tags": [],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": [
+    "马铃薯"
+   ]
+  },
+  "napa_cabbage": {
+   "name_zh": "大白菜",
+   "name_en": "napa cabbage",
+   "unit": "g",
+   "category": "vegetable",
+   "tags": [],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": [
+    "白菜"
+   ]
+  },
+  "bok_choy": {
+   "name_zh": "小青菜",
+   "name_en": "bok choy",
+   "unit": "g",
+   "category": "vegetable",
+   "tags": [],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": [
+    "青菜",
+    "上海青",
+    "小白菜",
+    "油菜"
+   ]
+  },
+  "broccoli": {
+   "name_zh": "西兰花",
+   "name_en": "broccoli",
+   "unit": "g",
+   "category": "vegetable",
+   "tags": [],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": [
+    "西蓝花"
+   ]
+  },
+  "carrot": {
+   "name_zh": "胡萝卜",
+   "name_en": "carrot",
+   "unit": "g",
+   "category": "vegetable",
+   "tags": [],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": []
+  },
+  "green_pepper": {
+   "name_zh": "青椒",
+   "name_en": "green pepper",
+   "unit": "g",
+   "category": "vegetable",
+   "tags": [],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": [
+    "甜椒"
+   ]
+  },
+  "eggplant": {
+   "name_zh": "茄子",
+   "name_en": "eggplant",
+   "unit": "g",
+   "category": "vegetable",
+   "tags": [],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": []
+  },
+  "cucumber": {
+   "name_zh": "黄瓜",
+   "name_en": "cucumber",
+   "unit": "g",
+   "category": "vegetable",
+   "tags": [],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": []
+  },
+  "spinach": {
+   "name_zh": "菠菜",
+   "name_en": "spinach",
+   "unit": "g",
+   "category": "vegetable",
+   "tags": [],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": []
+  },
+  "mushroom": {
+   "name_zh": "香菇",
+   "name_en": "shiitake mushroom",
+   "unit": "g",
+   "category": "vegetable",
+   "tags": [],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": [
+    "蘑菇"
+   ]
+  },
+  "onion": {
+   "name_zh": "洋葱",
+   "name_en": "onion",
+   "unit": "g",
+   "category": "vegetable",
+   "tags": [],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": []
+  },
+  "garlic": {
+   "name_zh": "大蒜",
+   "name_en": "garlic",
+   "unit": "g",
+   "category": "aromatic",
+   "tags": [],
+   "perishable": false,
+   "pantry_staple": false,
+   "aliases": [
+    "蒜",
+    "蒜头"
+   ]
+  },
+  "ginger": {
+   "name_zh": "生姜",
+   "name_en": "ginger",
+   "unit": "g",
+   "category": "aromatic",
+   "tags": [],
+   "perishable": false,
+   "pantry_staple": false,
+   "aliases": [
+    "姜"
+   ]
+  },
+  "scallion": {
+   "name_zh": "小葱",
+   "name_en": "scallion",
+   "unit": "g",
+   "category": "aromatic",
+   "tags": [],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": [
+    "葱",
+    "香葱"
+   ]
+  },
+  "bean_sprouts": {
+   "name_zh": "绿豆芽",
+   "name_en": "bean sprouts",
+   "unit": "g",
+   "category": "vegetable",
+   "tags": [],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": [
+    "豆芽"
+   ]
+  },
+  "lettuce": {
+   "name_zh": "生菜",
+   "name_en": "lettuce",
+   "unit": "g",
+   "category": "vegetable",
+   "tags": [],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": []
+  },
+  "chili": {
+   "name_zh": "小米辣",
+   "name_en": "chili pepper",
+   "unit": "g",
+   "category": "aromatic",
+   "tags": [
+    "spicy"
+   ],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": [
+    "辣椒",
+    "干辣椒"
+   ]
+  },
+  "corn": {
+   "name_zh": "甜玉米",
+   "name_en": "sweet corn",
+   "unit": "g",
+   "category": "vegetable",
+   "tags": [],
+   "perishable": true,
+   "pantry_staple": false,
+   "aliases": [
+    "玉米"
+   ]
+  },
+  "peanut": {
+   "name_zh": "花生米",
+   "name_en": "peanuts",
+   "unit": "g",
+   "category": "nut",
+   "tags": [
+    "peanut"
+   ],
+   "perishable": false,
+   "pantry_staple": false,
+   "aliases": [
+    "花生"
+   ]
+  },
+  "oil": {
+   "name_zh": "食用油",
+   "name_en": "cooking oil",
+   "unit": "ml",
+   "category": "staple",
+   "tags": [],
+   "perishable": false,
+   "pantry_staple": true,
+   "aliases": [
+    "油",
+    "花生油",
+    "菜籽油"
+   ]
+  },
+  "salt": {
+   "name_zh": "食盐",
+   "name_en": "salt",
+   "unit": "g",
+   "category": "staple",
+   "tags": [],
+   "perishable": false,
+   "pantry_staple": true,
+   "aliases": [
+    "盐"
+   ]
+  },
+  "soy_sauce": {
+   "name_zh": "生抽",
+   "name_en": "soy sauce",
+   "unit": "ml",
+   "category": "staple",
+   "tags": [
+    "soy",
+    "gluten"
+   ],
+   "perishable": false,
+   "pantry_staple": true,
+   "aliases": [
+    "酱油"
+   ]
+  },
+  "vinegar": {
+   "name_zh": "香醋",
+   "name_en": "vinegar",
+   "unit": "ml",
+   "category": "staple",
+   "tags": [],
+   "perishable": false,
+   "pantry_staple": true,
+   "aliases": [
+    "醋"
+   ]
+  },
+  "sugar": {
+   "name_zh": "白砂糖",
+   "name_en": "sugar",
+   "unit": "g",
+   "category": "staple",
+   "tags": [],
+   "perishable": false,
+   "pantry_staple": true,
+   "aliases": [
+    "糖"
+   ]
+  },
+  "starch": {
+   "name_zh": "玉米淀粉",
+   "name_en": "corn starch",
+   "unit": "g",
+   "category": "staple",
+   "tags": [],
+   "perishable": false,
+   "pantry_staple": true,
+   "aliases": [
+    "淀粉"
+   ]
+  }
+ },
+ "products": [
+  {
+   "store": "market_a",
+   "ingredient": "rice",
+   "pack_qty": 2500,
+   "price": 16.9,
+   "label": "大米 2500g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "rice",
+   "pack_qty": 5000,
+   "price": 29.9,
+   "label": "大米 5000g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "rice",
+   "pack_qty": 1000,
+   "price": 7.0,
+   "label": "大米 1000g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "rice",
+   "pack_qty": 1000,
+   "price": 8.5,
+   "label": "大米 1000g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "rice",
+   "pack_qty": 5000,
+   "price": 27.9,
+   "label": "大米 5000g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "noodles",
+   "pack_qty": 500,
+   "price": 6.5,
+   "label": "挂面 500g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "noodles",
+   "pack_qty": 1000,
+   "price": 11.9,
+   "label": "挂面 1000g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "noodles",
+   "pack_qty": 800,
+   "price": 9.9,
+   "label": "挂面 800g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "oats",
+   "pack_qty": 500,
+   "price": 12.9,
+   "label": "燕麦片 500g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "oats",
+   "pack_qty": 1000,
+   "price": 19.9,
+   "label": "燕麦片 1000g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "oats",
+   "pack_qty": 1000,
+   "price": 17.8,
+   "label": "燕麦片 1000g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "bread",
+   "pack_qty": 400,
+   "price": 9.9,
+   "label": "吐司面包 400g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "bread",
+   "pack_qty": 400,
+   "price": 8.8,
+   "label": "吐司面包 400g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "millet",
+   "pack_qty": 1000,
+   "price": 12.9,
+   "label": "小米 1000g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "millet",
+   "pack_qty": 500,
+   "price": 5.0,
+   "label": "小米 500g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "millet",
+   "pack_qty": 500,
+   "price": 6.5,
+   "label": "小米 500g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "egg",
+   "pack_qty": 10,
+   "price": 9.9,
+   "label": "鸡蛋 10枚"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "egg",
+   "pack_qty": 30,
+   "price": 26.9,
+   "label": "鸡蛋 30枚"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "egg",
+   "pack_qty": 15,
+   "price": 12.0,
+   "label": "鸡蛋 15枚"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "egg",
+   "pack_qty": 10,
+   "price": 10.8,
+   "label": "鸡蛋 10枚"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "egg",
+   "pack_qty": 20,
+   "price": 19.9,
+   "label": "鸡蛋 20枚"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "tofu",
+   "pack_qty": 400,
+   "price": 4.5,
+   "label": "北豆腐 400g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "tofu",
+   "pack_qty": 500,
+   "price": 3.5,
+   "label": "北豆腐 500g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "tofu",
+   "pack_qty": 350,
+   "price": 3.9,
+   "label": "北豆腐 350g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "pork_lean",
+   "pack_qty": 500,
+   "price": 16.9,
+   "label": "猪里脊 500g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "pork_lean",
+   "pack_qty": 500,
+   "price": 14.0,
+   "label": "猪里脊 500g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "pork_lean",
+   "pack_qty": 400,
+   "price": 13.9,
+   "label": "猪里脊 400g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "pork_ribs",
+   "pack_qty": 500,
+   "price": 26.9,
+   "label": "猪肋排 500g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "pork_ribs",
+   "pack_qty": 500,
+   "price": 24.0,
+   "label": "猪肋排 500g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "pork_ribs",
+   "pack_qty": 500,
+   "price": 25.9,
+   "label": "猪肋排 500g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "minced_pork",
+   "pack_qty": 300,
+   "price": 9.9,
+   "label": "猪肉末 300g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "minced_pork",
+   "pack_qty": 500,
+   "price": 14.0,
+   "label": "猪肉末 500g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "minced_pork",
+   "pack_qty": 250,
+   "price": 8.5,
+   "label": "猪肉末 250g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "chicken_breast",
+   "pack_qty": 500,
+   "price": 12.9,
+   "label": "鸡胸肉 500g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "chicken_breast",
+   "pack_qty": 1000,
+   "price": 22.9,
+   "label": "鸡胸肉 1000g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "chicken_breast",
+   "pack_qty": 500,
+   "price": 12.0,
+   "label": "鸡胸肉 500g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "chicken_breast",
+   "pack_qty": 1000,
+   "price": 21.9,
+   "label": "鸡胸肉 1000g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "chicken_thigh",
+   "pack_qty": 1000,
+   "price": 19.9,
+   "label": "去骨鸡腿肉 1000g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "chicken_thigh",
+   "pack_qty": 500,
+   "price": 11.0,
+   "label": "去骨鸡腿肉 500g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "chicken_thigh",
+   "pack_qty": 800,
+   "price": 17.9,
+   "label": "去骨鸡腿肉 800g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "beef",
+   "pack_qty": 500,
+   "price": 39.9,
+   "label": "牛腩 500g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "beef",
+   "pack_qty": 500,
+   "price": 36.0,
+   "label": "牛腩 500g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "beef",
+   "pack_qty": 400,
+   "price": 32.9,
+   "label": "牛腩 400g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "fish_fillet",
+   "pack_qty": 400,
+   "price": 15.9,
+   "label": "巴沙鱼柳 400g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "fish_fillet",
+   "pack_qty": 500,
+   "price": 18.0,
+   "label": "巴沙鱼柳 500g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "fish_fillet",
+   "pack_qty": 500,
+   "price": 19.9,
+   "label": "巴沙鱼柳 500g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "shrimp",
+   "pack_qty": 300,
+   "price": 29.9,
+   "label": "虾仁 300g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "shrimp",
+   "pack_qty": 500,
+   "price": 42.0,
+   "label": "虾仁 500g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "shrimp",
+   "pack_qty": 500,
+   "price": 45.9,
+   "label": "虾仁 500g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "milk",
+   "pack_qty": 250,
+   "price": 3.5,
+   "label": "纯牛奶 250ml"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "milk",
+   "pack_qty": 1000,
+   "price": 12.9,
+   "label": "纯牛奶 1000ml"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "milk",
+   "pack_qty": 1000,
+   "price": 11.9,
+   "label": "纯牛奶 1000ml"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "tomato",
+   "pack_qty": 500,
+   "price": 5.9,
+   "label": "番茄 500g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "tomato",
+   "pack_qty": 500,
+   "price": 4.0,
+   "label": "番茄 500g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "tomato",
+   "pack_qty": 500,
+   "price": 5.5,
+   "label": "番茄 500g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "potato",
+   "pack_qty": 1000,
+   "price": 5.9,
+   "label": "土豆 1000g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "potato",
+   "pack_qty": 500,
+   "price": 2.5,
+   "label": "土豆 500g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "potato",
+   "pack_qty": 1000,
+   "price": 5.5,
+   "label": "土豆 1000g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "napa_cabbage",
+   "pack_qty": 1000,
+   "price": 4.9,
+   "label": "大白菜 1000g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "napa_cabbage",
+   "pack_qty": 1000,
+   "price": 3.5,
+   "label": "大白菜 1000g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "napa_cabbage",
+   "pack_qty": 1000,
+   "price": 4.5,
+   "label": "大白菜 1000g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "bok_choy",
+   "pack_qty": 400,
+   "price": 3.9,
+   "label": "小青菜 400g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "bok_choy",
+   "pack_qty": 500,
+   "price": 3.0,
+   "label": "小青菜 500g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "bok_choy",
+   "pack_qty": 400,
+   "price": 3.5,
+   "label": "小青菜 400g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "broccoli",
+   "pack_qty": 400,
+   "price": 6.9,
+   "label": "西兰花 400g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "broccoli",
+   "pack_qty": 500,
+   "price": 7.0,
+   "label": "西兰花 500g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "broccoli",
+   "pack_qty": 500,
+   "price": 7.9,
+   "label": "西兰花 500g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "carrot",
+   "pack_qty": 500,
+   "price": 3.5,
+   "label": "胡萝卜 500g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "carrot",
+   "pack_qty": 500,
+   "price": 2.5,
+   "label": "胡萝卜 500g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "carrot",
+   "pack_qty": 500,
+   "price": 3.2,
+   "label": "胡萝卜 500g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "green_pepper",
+   "pack_qty": 300,
+   "price": 3.9,
+   "label": "青椒 300g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "green_pepper",
+   "pack_qty": 500,
+   "price": 5.0,
+   "label": "青椒 500g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "green_pepper",
+   "pack_qty": 300,
+   "price": 3.5,
+   "label": "青椒 300g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "eggplant",
+   "pack_qty": 500,
+   "price": 5.5,
+   "label": "茄子 500g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "eggplant",
+   "pack_qty": 500,
+   "price": 4.0,
+   "label": "茄子 500g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "eggplant",
+   "pack_qty": 500,
+   "price": 5.2,
+   "label": "茄子 500g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "cucumber",
+   "pack_qty": 500,
+   "price": 4.9,
+   "label": "黄瓜 500g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "cucumber",
+   "pack_qty": 500,
+   "price": 3.5,
+   "label": "黄瓜 500g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "cucumber",
+   "pack_qty": 500,
+   "price": 4.5,
+   "label": "黄瓜 500g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "spinach",
+   "pack_qty": 300,
+   "price": 4.5,
+   "label": "菠菜 300g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "spinach",
+   "pack_qty": 500,
+   "price": 5.0,
+   "label": "菠菜 500g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "spinach",
+   "pack_qty": 300,
+   "price": 3.9,
+   "label": "菠菜 300g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "mushroom",
+   "pack_qty": 200,
+   "price": 6.9,
+   "label": "香菇 200g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "mushroom",
+   "pack_qty": 250,
+   "price": 6.0,
+   "label": "香菇 250g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "mushroom",
+   "pack_qty": 200,
+   "price": 5.9,
+   "label": "香菇 200g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "onion",
+   "pack_qty": 500,
+   "price": 2.9,
+   "label": "洋葱 500g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "onion",
+   "pack_qty": 500,
+   "price": 2.0,
+   "label": "洋葱 500g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "onion",
+   "pack_qty": 500,
+   "price": 2.8,
+   "label": "洋葱 500g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "garlic",
+   "pack_qty": 200,
+   "price": 4.5,
+   "label": "大蒜 200g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "garlic",
+   "pack_qty": 250,
+   "price": 4.0,
+   "label": "大蒜 250g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "garlic",
+   "pack_qty": 200,
+   "price": 3.9,
+   "label": "大蒜 200g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "ginger",
+   "pack_qty": 150,
+   "price": 3.5,
+   "label": "生姜 150g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "ginger",
+   "pack_qty": 250,
+   "price": 4.0,
+   "label": "生姜 250g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "ginger",
+   "pack_qty": 150,
+   "price": 3.2,
+   "label": "生姜 150g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "scallion",
+   "pack_qty": 100,
+   "price": 1.9,
+   "label": "小葱 100g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "scallion",
+   "pack_qty": 250,
+   "price": 2.0,
+   "label": "小葱 250g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "scallion",
+   "pack_qty": 150,
+   "price": 2.5,
+   "label": "小葱 150g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "bean_sprouts",
+   "pack_qty": 400,
+   "price": 2.9,
+   "label": "绿豆芽 400g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "bean_sprouts",
+   "pack_qty": 500,
+   "price": 2.0,
+   "label": "绿豆芽 500g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "bean_sprouts",
+   "pack_qty": 300,
+   "price": 2.5,
+   "label": "绿豆芽 300g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "lettuce",
+   "pack_qty": 400,
+   "price": 4.5,
+   "label": "生菜 400g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "lettuce",
+   "pack_qty": 500,
+   "price": 4.0,
+   "label": "生菜 500g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "lettuce",
+   "pack_qty": 400,
+   "price": 3.9,
+   "label": "生菜 400g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "chili",
+   "pack_qty": 100,
+   "price": 2.9,
+   "label": "小米辣 100g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "chili",
+   "pack_qty": 250,
+   "price": 4.0,
+   "label": "小米辣 250g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "chili",
+   "pack_qty": 100,
+   "price": 2.5,
+   "label": "小米辣 100g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "corn",
+   "pack_qty": 500,
+   "price": 4.9,
+   "label": "甜玉米 500g"
+  },
+  {
+   "store": "wet_market",
+   "ingredient": "corn",
+   "pack_qty": 500,
+   "price": 3.5,
+   "label": "甜玉米 500g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "corn",
+   "pack_qty": 500,
+   "price": 4.5,
+   "label": "甜玉米 500g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "peanut",
+   "pack_qty": 500,
+   "price": 9.9,
+   "label": "花生米 500g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "peanut",
+   "pack_qty": 400,
+   "price": 7.9,
+   "label": "花生米 400g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "oil",
+   "pack_qty": 900,
+   "price": 32.9,
+   "label": "食用油 900ml"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "oil",
+   "pack_qty": 1800,
+   "price": 59.9,
+   "label": "食用油 1800ml"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "oil",
+   "pack_qty": 1800,
+   "price": 56.9,
+   "label": "食用油 1800ml"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "salt",
+   "pack_qty": 400,
+   "price": 2.5,
+   "label": "食盐 400g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "salt",
+   "pack_qty": 400,
+   "price": 2.5,
+   "label": "食盐 400g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "soy_sauce",
+   "pack_qty": 500,
+   "price": 9.9,
+   "label": "生抽 500ml"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "soy_sauce",
+   "pack_qty": 500,
+   "price": 8.9,
+   "label": "生抽 500ml"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "vinegar",
+   "pack_qty": 500,
+   "price": 6.9,
+   "label": "香醋 500ml"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "vinegar",
+   "pack_qty": 500,
+   "price": 6.5,
+   "label": "香醋 500ml"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "sugar",
+   "pack_qty": 400,
+   "price": 5.5,
+   "label": "白砂糖 400g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "sugar",
+   "pack_qty": 400,
+   "price": 5.2,
+   "label": "白砂糖 400g"
+  },
+  {
+   "store": "market_a",
+   "ingredient": "starch",
+   "pack_qty": 250,
+   "price": 4.5,
+   "label": "玉米淀粉 250g"
+  },
+  {
+   "store": "app_b",
+   "ingredient": "starch",
+   "pack_qty": 250,
+   "price": 4.2,
+   "label": "玉米淀粉 250g"
+  }
+ ]
+}

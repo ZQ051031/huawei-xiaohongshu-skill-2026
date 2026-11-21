@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "name": "smart-grocery-saver",
+  "display_name": {"zh": "省钱买菜助手", "en": "Smart Grocery Saver"},
+  "version": "1.0.0",
+  "description": {
+    "zh": "输入家庭人数、周预算、忌口与存货、手上的优惠券，生成一周菜单、按商店拆分的最省钱购物清单、优惠券叠加明细和可发布的小红书省钱笔记。",
+    "en": "Turns household size, weekly budget, dietary needs, pantry and coupons into a weekly meal plan, a store-split optimised shopping list, coupon-stacking savings and a shareable Xiaohongshu-style note."
+  },
+  "author": "ZQ051031",
+  "license": "MIT",
+  "homepage": "https://github.com/ZQ051031/huawei-xiaohongshu-skill-2026",
+  "category": ["life", "shopping", "food", "personal-finance"],
+  "keywords": ["买菜", "省钱", "优惠券", "满减", "一周菜谱", "meal plan", "grocery", "coupon", "budget", "小红书"],
+  "languages": ["zh-CN", "en"],
+  "scenario": "Household weekly grocery planning and coupon saving (real-life, recurring every week)",
+  "runtime": {"type": "python", "min_version": "3.9", "dependencies": [], "network": false, "filesystem": "read skill dir; write only to --out"},
+  "entrypoint": {"command": "python3 scripts/grocery_saver.py", "cwd": "skill_root"},
+  "commands": [
+    {"name": "plan", "usage": "python3 scripts/grocery_saver.py plan --input <request.json|-> [--prices prices.csv] [--format json|markdown|note|summary] [--out DIR] [--lang zh|en] [--strict-budget]",
+     "description": "Build the weekly plan; JSON result follows the output contract below."},
+    {"name": "parse-coupons", "usage": "python3 scripts/grocery_saver.py parse-coupons \"<coupon text>\" ...", "description": "Convert pasted coupon text into structured coupons."},
+    {"name": "export-prices", "usage": "python3 scripts/grocery_saver.py export-prices > prices.csv", "description": "Export the price table for the user to edit with real prices."},
+    {"name": "validate", "usage": "python3 scripts/grocery_saver.py validate --input request.json", "description": "Validate a request without planning."}
+  ],
+  "input": {
+    "format": "application/json",
+    "schema": "schemas/input.schema.json",
+    "required": [],
+    "key_fields": ["household", "budget.weekly", "meals", "diet", "pantry", "coupon_texts", "coupons", "price_overrides", "stores"],
+    "examples": ["examples/family_of_three.json", "examples/vegetarian_couple_en.json", "examples/student_tight_budget.json"]
+  },
+  "output": {
+    "format": "application/json",
+    "sections": {
+      "summary": "total, budget, remaining, status, baseline_total, savings_total, savings_pct, cost_per_portion, stores_used",
+      "meal_plan": "per day/meal dishes with estimated cost",
+      "shopping_list": "per store items (packs, list vs paid cost, applied deals), order discounts, delivery fee; pantry staples to check",
+      "savings": "baseline definition and step breakdown: pantry, stores, item_coupons, order_coupons",
+      "coupons": "used and unused (with reason)",
+      "pantry_used / leftovers": "stock consumed and what remains for next week",
+      "warnings / budget_tips": "notes and suggestions when over budget",
+      "outputs.markdown": "full human-readable report",
+      "outputs.xiaohongshu_note": "title (<=20 chars), body (<=1000 chars), hashtags"
+    }
+  },
+  "coupon_types": ["percent_off", "fixed_off_item", "buy_x_get_y", "nth_percent", "threshold_off"],
+  "exit_codes": {"0": "ok", "2": "invalid input (errors on stderr)", "3": "over budget with --strict-budget"},
+  "data": {
+    "catalog": "data/sample_catalog.json",
+    "recipes": "data/recipes.json",
+    "is_sample": true,
+    "notice": "Bundled store names and prices are fictional samples for demonstration, not real or current prices. Users replace them via --prices CSV or price_overrides."
+  },
+  "privacy": "Runs locally; no network access; no personal data stored.",
+  "competition": {"name": "2026华为开发者大赛·小红书Skill创新赛", "hashtag": "#小红书Skill创新赛"}
+}

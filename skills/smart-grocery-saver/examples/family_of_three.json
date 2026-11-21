@@ -1,0 +1,17 @@
+{
+  "household": {"adults": 2, "children": 1},
+  "budget": {"weekly": 220},
+  "meals": {"breakfast": 7, "lunch": 2, "dinner": 7},
+  "dishes_per_meal": 2,
+  "diet": {"allergies": ["花生"], "dislikes": ["香菜"], "favorites": ["番茄炒蛋"]},
+  "pantry": ["大米:3000", "鸡蛋:4", "土豆:500"],
+  "coupon_texts": [
+    "示例超市A：满100减15",
+    "示例超市A：鸡蛋 第二件半价",
+    "app_b: 牛奶 买2送1",
+    "wet_market: 豆腐 8折"
+  ],
+  "stores": {"max_stores": 2, "default_store": "market_a"},
+  "start_date": "2026-11-23",
+  "output": {"lang": "zh", "include_contest_tags": true}
+}

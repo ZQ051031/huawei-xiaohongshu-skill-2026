@@ -1,0 +1,1171 @@
+{
+  "skill": "smart-grocery-saver",
+  "version": "1.0.0",
+  "data_notice": {
+    "is_sample": true,
+    "en": "SAMPLE DATA ONLY: store names and prices are illustrative placeholders for demo/testing, NOT real or current prices of any real store. Edit them (CSV or JSON) to match the stores you actually use.",
+    "zh": "示例数据：商店名称与价格均为演示用的虚构数值，并非任何真实商店的真实或当前价格。请按你常去的商店修改（CSV 或 JSON）。"
+  },
+  "request": {
+    "portions_per_meal": 2.6,
+    "household": {
+      "adults": 2,
+      "children": 1,
+      "child_portion": 0.6
+    },
+    "meals": {
+      "breakfast": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "lunch": [
+        6,
+        7
+      ],
+      "dinner": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "dishes_per_meal": 2,
+    "forbidden_tags": [
+      "peanut"
+    ],
+    "stores_allowed": [
+      "market_a",
+      "wet_market",
+      "app_b"
+    ],
+    "max_stores": 2,
+    "start_date": "2026-11-23",
+    "lang": "zh"
+  },
+  "summary": {
+    "currency": "CNY",
+    "total": 137.5,
+    "budget": 220.0,
+    "remaining": 82.5,
+    "status": "within_budget",
+    "baseline_total": 204.8,
+    "savings_total": 67.3,
+    "savings_pct": 32.9,
+    "meals": 16,
+    "cost_per_portion": 3.31,
+    "stores_used": [
+      "market_a",
+      "wet_market"
+    ],
+    "budget_mode": false
+  },
+  "meal_plan": [
+    {
+      "day": 1,
+      "date": "2026-11-23",
+      "weekday": "周一",
+      "meal": "breakfast",
+      "meal_label": "早餐",
+      "dishes": [
+        {
+          "recipe_id": "millet_congee_egg",
+          "name": "小米粥配水煮蛋",
+          "role": "breakfast",
+          "minutes": 25,
+          "est_cost": 3.12
+        }
+      ],
+      "est_cost": 3.12
+    },
+    {
+      "day": 1,
+      "date": "2026-11-23",
+      "weekday": "周一",
+      "meal": "dinner",
+      "meal_label": "晚餐",
+      "dishes": [
+        {
+          "recipe_id": "tomato_tofu",
+          "name": "番茄烧豆腐",
+          "role": "main",
+          "minutes": 20,
+          "est_cost": 4.78
+        },
+        {
+          "recipe_id": "vinegar_cabbage",
+          "name": "醋溜白菜",
+          "role": "side",
+          "minutes": 10,
+          "est_cost": 1.64
+        },
+        {
+          "recipe_id": "steamed_rice",
+          "name": "米饭",
+          "role": "staple",
+          "minutes": 30,
+          "est_cost": 0.0
+        }
+      ],
+      "est_cost": 6.42
+    },
+    {
+      "day": 2,
+      "date": "2026-11-24",
+      "weekday": "周二",
+      "meal": "breakfast",
+      "meal_label": "早餐",
+      "dishes": [
+        {
+          "recipe_id": "millet_congee_cucumber",
+          "name": "小米粥配拍黄瓜",
+          "role": "breakfast",
+          "minutes": 25,
+          "est_cost": 2.58
+        }
+      ],
+      "est_cost": 2.58
+    },
+    {
+      "day": 2,
+      "date": "2026-11-24",
+      "weekday": "周二",
+      "meal": "dinner",
+      "meal_label": "晚餐",
+      "dishes": [
+        {
+          "recipe_id": "eggplant_minced_pork",
+          "name": "肉末茄子",
+          "role": "main",
+          "minutes": 25,
+          "est_cost": 7.01
+        },
+        {
+          "recipe_id": "stir_fried_bok_choy",
+          "name": "清炒小青菜",
+          "role": "side",
+          "minutes": 8,
+          "est_cost": 3.02
+        },
+        {
+          "recipe_id": "steamed_rice",
+          "name": "米饭",
+          "role": "staple",
+          "minutes": 30,
+          "est_cost": 0.0
+        }
+      ],
+      "est_cost": 10.03
+    },
+    {
+      "day": 3,
+      "date": "2026-11-25",
+      "weekday": "周三",
+      "meal": "breakfast",
+      "meal_label": "早餐",
+      "dishes": [
+        {
+          "recipe_id": "millet_congee_egg",
+          "name": "小米粥配水煮蛋",
+          "role": "breakfast",
+          "minutes": 25,
+          "est_cost": 3.12
+        }
+      ],
+      "est_cost": 3.12
+    },
+    {
+      "day": 3,
+      "date": "2026-11-25",
+      "weekday": "周三",
+      "meal": "dinner",
+      "meal_label": "晚餐",
+      "dishes": [
+        {
+          "recipe_id": "mapo_tofu",
+          "name": "麻婆豆腐",
+          "role": "main",
+          "minutes": 20,
+          "est_cost": 5.65
+        },
+        {
+          "recipe_id": "vinegar_cabbage",
+          "name": "醋溜白菜",
+          "role": "side",
+          "minutes": 10,
+          "est_cost": 1.64
+        },
+        {
+          "recipe_id": "steamed_rice",
+          "name": "米饭",
+          "role": "staple",
+          "minutes": 30,
+          "est_cost": 0.0
+        }
+      ],
+      "est_cost": 7.29
+    },
+    {
+      "day": 4,
+      "date": "2026-11-26",
+      "weekday": "周四",
+      "meal": "breakfast",
+      "meal_label": "早餐",
+      "dishes": [
+        {
+          "recipe_id": "millet_congee_cucumber",
+          "name": "小米粥配拍黄瓜",
+          "role": "breakfast",
+          "minutes": 25,
+          "est_cost": 2.58
+        }
+      ],
+      "est_cost": 2.58
+    },
+    {
+      "day": 4,
+      "date": "2026-11-26",
+      "weekday": "周四",
+      "meal": "dinner",
+      "meal_label": "晚餐",
+      "dishes": [
+        {
+          "recipe_id": "tomato_egg",
+          "name": "番茄炒蛋",
+          "role": "main",
+          "minutes": 15,
+          "est_cost": 5.72
+        },
+        {
+          "recipe_id": "stir_fried_bean_sprouts",
+          "name": "清炒豆芽",
+          "role": "side",
+          "minutes": 8,
+          "est_cost": 1.98
+        },
+        {
+          "recipe_id": "steamed_rice",
+          "name": "米饭",
+          "role": "staple",
+          "minutes": 30,
+          "est_cost": 0.0
+        }
+      ],
+      "est_cost": 7.7
+    },
+    {
+      "day": 5,
+      "date": "2026-11-27",
+      "weekday": "周五",
+      "meal": "breakfast",
+      "meal_label": "早餐",
+      "dishes": [
+        {
+          "recipe_id": "egg_noodles",
+          "name": "青菜鸡蛋面",
+          "role": "breakfast",
+          "minutes": 12,
+          "est_cost": 5.47
+        }
+      ],
+      "est_cost": 5.47
+    },
+    {
+      "day": 5,
+      "date": "2026-11-27",
+      "weekday": "周五",
+      "meal": "dinner",
+      "meal_label": "晚餐",
+      "dishes": [
+        {
+          "recipe_id": "carrot_egg",
+          "name": "胡萝卜炒蛋",
+          "role": "main",
+          "minutes": 15,
+          "est_cost": 4.42
+        },
+        {
+          "recipe_id": "hot_sour_potato",
+          "name": "酸辣土豆丝",
+          "role": "side",
+          "minutes": 15,
+          "est_cost": 2.18
+        },
+        {
+          "recipe_id": "steamed_rice",
+          "name": "米饭",
+          "role": "staple",
+          "minutes": 30,
+          "est_cost": 0.0
+        }
+      ],
+      "est_cost": 6.6
+    },
+    {
+      "day": 6,
+      "date": "2026-11-28",
+      "weekday": "周六",
+      "meal": "breakfast",
+      "meal_label": "早餐",
+      "dishes": [
+        {
+          "recipe_id": "toast_egg_milk",
+          "name": "吐司煎蛋配牛奶",
+          "role": "breakfast",
+          "minutes": 10,
+          "est_cost": 13.22
+        }
+      ],
+      "est_cost": 13.22
+    },
+    {
+      "day": 6,
+      "date": "2026-11-28",
+      "weekday": "周六",
+      "meal": "lunch",
+      "meal_label": "午餐",
+      "dishes": [
+        {
+          "recipe_id": "tomato_tofu",
+          "name": "番茄烧豆腐",
+          "role": "main",
+          "minutes": 20,
+          "est_cost": 4.78
+        },
+        {
+          "recipe_id": "smashed_cucumber",
+          "name": "拍黄瓜",
+          "role": "side",
+          "minutes": 5,
+          "est_cost": 2.98
+        },
+        {
+          "recipe_id": "steamed_rice",
+          "name": "米饭",
+          "role": "staple",
+          "minutes": 30,
+          "est_cost": 0.0
+        }
+      ],
+      "est_cost": 7.76
+    },
+    {
+      "day": 6,
+      "date": "2026-11-28",
+      "weekday": "周六",
+      "meal": "dinner",
+      "meal_label": "晚餐",
+      "dishes": [
+        {
+          "recipe_id": "tomato_egg",
+          "name": "番茄炒蛋",
+          "role": "main",
+          "minutes": 15,
+          "est_cost": 5.72
+        },
+        {
+          "recipe_id": "carrot_corn",
+          "name": "玉米胡萝卜丁",
+          "role": "side",
+          "minutes": 12,
+          "est_cost": 2.6
+        },
+        {
+          "recipe_id": "steamed_rice",
+          "name": "米饭",
+          "role": "staple",
+          "minutes": 30,
+          "est_cost": 0.0
+        }
+      ],
+      "est_cost": 8.32
+    },
+    {
+      "day": 7,
+      "date": "2026-11-29",
+      "weekday": "周日",
+      "meal": "breakfast",
+      "meal_label": "早餐",
+      "dishes": [
+        {
+          "recipe_id": "egg_noodles",
+          "name": "青菜鸡蛋面",
+          "role": "breakfast",
+          "minutes": 12,
+          "est_cost": 5.47
+        }
+      ],
+      "est_cost": 5.47
+    },
+    {
+      "day": 7,
+      "date": "2026-11-29",
+      "weekday": "周日",
+      "meal": "lunch",
+      "meal_label": "午餐",
+      "dishes": [
+        {
+          "recipe_id": "carrot_egg",
+          "name": "胡萝卜炒蛋",
+          "role": "main",
+          "minutes": 15,
+          "est_cost": 4.42
+        },
+        {
+          "recipe_id": "hot_sour_potato",
+          "name": "酸辣土豆丝",
+          "role": "side",
+          "minutes": 15,
+          "est_cost": 2.18
+        },
+        {
+          "recipe_id": "steamed_rice",
+          "name": "米饭",
+          "role": "staple",
+          "minutes": 30,
+          "est_cost": 0.0
+        }
+      ],
+      "est_cost": 6.6
+    },
+    {
+      "day": 7,
+      "date": "2026-11-29",
+      "weekday": "周日",
+      "meal": "dinner",
+      "meal_label": "晚餐",
+      "dishes": [
+        {
+          "recipe_id": "mapo_tofu",
+          "name": "麻婆豆腐",
+          "role": "main",
+          "minutes": 20,
+          "est_cost": 5.65
+        },
+        {
+          "recipe_id": "stir_fried_bean_sprouts",
+          "name": "清炒豆芽",
+          "role": "side",
+          "minutes": 8,
+          "est_cost": 1.98
+        },
+        {
+          "recipe_id": "steamed_rice",
+          "name": "米饭",
+          "role": "staple",
+          "minutes": 30,
+          "est_cost": 0.0
+        }
+      ],
+      "est_cost": 7.63
+    }
+  ],
+  "shopping_list": {
+    "stores": [
+      {
+        "store": "market_a",
+        "name": "示例超市A",
+        "items": [
+          {
+            "ingredient": "chili",
+            "name": "小米辣",
+            "unit": "g",
+            "need": 37,
+            "bought_qty": 100.0,
+            "packs": [
+              {
+                "label": "小米辣 100g",
+                "pack_qty": 100.0,
+                "count": 1,
+                "unit_price": 2.9,
+                "free": 0
+              }
+            ],
+            "list_cost": 2.9,
+            "cost": 2.9,
+            "coupons": [],
+            "category": "aromatic"
+          },
+          {
+            "ingredient": "milk",
+            "name": "纯牛奶",
+            "unit": "ml",
+            "need": 520,
+            "bought_qty": 750.0,
+            "packs": [
+              {
+                "label": "纯牛奶 250ml",
+                "pack_qty": 250.0,
+                "count": 3,
+                "unit_price": 3.5,
+                "free": 0
+              }
+            ],
+            "list_cost": 10.5,
+            "cost": 10.5,
+            "coupons": [],
+            "category": "dairy"
+          },
+          {
+            "ingredient": "bread",
+            "name": "吐司面包",
+            "unit": "g",
+            "need": 156,
+            "bought_qty": 400.0,
+            "packs": [
+              {
+                "label": "吐司面包 400g",
+                "pack_qty": 400.0,
+                "count": 1,
+                "unit_price": 9.9,
+                "free": 0
+              }
+            ],
+            "list_cost": 9.9,
+            "cost": 9.9,
+            "coupons": [],
+            "category": "grain"
+          },
+          {
+            "ingredient": "noodles",
+            "name": "挂面",
+            "unit": "g",
+            "need": 416,
+            "bought_qty": 500.0,
+            "packs": [
+              {
+                "label": "挂面 500g",
+                "pack_qty": 500.0,
+                "count": 1,
+                "unit_price": 6.5,
+                "free": 0
+              }
+            ],
+            "list_cost": 6.5,
+            "cost": 6.5,
+            "coupons": [],
+            "category": "grain"
+          }
+        ],
+        "list_subtotal": 29.8,
+        "subtotal": 29.8,
+        "order_discounts": [],
+        "delivery_fee": 0.0,
+        "total": 29.8
+      },
+      {
+        "store": "wet_market",
+        "name": "示例菜市场",
+        "items": [
+          {
+            "ingredient": "garlic",
+            "name": "大蒜",
+            "unit": "g",
+            "need": 76,
+            "bought_qty": 250.0,
+            "packs": [
+              {
+                "label": "大蒜 250g",
+                "pack_qty": 250.0,
+                "count": 1,
+                "unit_price": 4.0,
+                "free": 0
+              }
+            ],
+            "list_cost": 4.0,
+            "cost": 4.0,
+            "coupons": [],
+            "category": "aromatic"
+          },
+          {
+            "ingredient": "scallion",
+            "name": "小葱",
+            "unit": "g",
+            "need": 115,
+            "bought_qty": 250.0,
+            "packs": [
+              {
+                "label": "小葱 250g",
+                "pack_qty": 250.0,
+                "count": 1,
+                "unit_price": 2.0,
+                "free": 0
+              }
+            ],
+            "list_cost": 2.0,
+            "cost": 2.0,
+            "coupons": [],
+            "category": "aromatic"
+          },
+          {
+            "ingredient": "millet",
+            "name": "小米",
+            "unit": "g",
+            "need": 416,
+            "bought_qty": 500.0,
+            "packs": [
+              {
+                "label": "小米 500g",
+                "pack_qty": 500.0,
+                "count": 1,
+                "unit_price": 5.0,
+                "free": 0
+              }
+            ],
+            "list_cost": 5.0,
+            "cost": 5.0,
+            "coupons": [],
+            "category": "grain"
+          },
+          {
+            "ingredient": "minced_pork",
+            "name": "猪肉末",
+            "unit": "g",
+            "need": 338,
+            "bought_qty": 500.0,
+            "packs": [
+              {
+                "label": "猪肉末 500g",
+                "pack_qty": 500.0,
+                "count": 1,
+                "unit_price": 14.0,
+                "free": 0
+              }
+            ],
+            "list_cost": 14.0,
+            "cost": 14.0,
+            "coupons": [],
+            "category": "meat"
+          },
+          {
+            "ingredient": "egg",
+            "name": "鸡蛋",
+            "unit": "pcs",
+            "need": 25,
+            "bought_qty": 30.0,
+            "packs": [
+              {
+                "label": "鸡蛋 15枚",
+                "pack_qty": 15.0,
+                "count": 2,
+                "unit_price": 12.0,
+                "free": 0
+              }
+            ],
+            "list_cost": 24.0,
+            "cost": 24.0,
+            "coupons": [],
+            "category": "protein"
+          },
+          {
+            "ingredient": "tofu",
+            "name": "北豆腐",
+            "unit": "g",
+            "need": 1560,
+            "bought_qty": 2000.0,
+            "packs": [
+              {
+                "label": "北豆腐 500g",
+                "pack_qty": 500.0,
+                "count": 4,
+                "unit_price": 3.5,
+                "free": 0
+              }
+            ],
+            "list_cost": 14.0,
+            "cost": 11.2,
+            "coupons": [
+              {
+                "id": "c4",
+                "label": "北豆腐 8折"
+              }
+            ],
+            "category": "protein"
+          },
+          {
+            "ingredient": "bean_sprouts",
+            "name": "绿豆芽",
+            "unit": "g",
+            "need": 936,
+            "bought_qty": 1000.0,
+            "packs": [
+              {
+                "label": "绿豆芽 500g",
+                "pack_qty": 500.0,
+                "count": 2,
+                "unit_price": 2.0,
+                "free": 0
+              }
+            ],
+            "list_cost": 4.0,
+            "cost": 4.0,
+            "coupons": [],
+            "category": "vegetable"
+          },
+          {
+            "ingredient": "bok_choy",
+            "name": "小青菜",
+            "unit": "g",
+            "need": 676,
+            "bought_qty": 1000.0,
+            "packs": [
+              {
+                "label": "小青菜 500g",
+                "pack_qty": 500.0,
+                "count": 2,
+                "unit_price": 3.0,
+                "free": 0
+              }
+            ],
+            "list_cost": 6.0,
+            "cost": 6.0,
+            "coupons": [],
+            "category": "vegetable"
+          },
+          {
+            "ingredient": "carrot",
+            "name": "胡萝卜",
+            "unit": "g",
+            "need": 676,
+            "bought_qty": 1000.0,
+            "packs": [
+              {
+                "label": "胡萝卜 500g",
+                "pack_qty": 500.0,
+                "count": 2,
+                "unit_price": 2.5,
+                "free": 0
+              }
+            ],
+            "list_cost": 5.0,
+            "cost": 5.0,
+            "coupons": [],
+            "category": "vegetable"
+          },
+          {
+            "ingredient": "corn",
+            "name": "甜玉米",
+            "unit": "g",
+            "need": 260,
+            "bought_qty": 500.0,
+            "packs": [
+              {
+                "label": "甜玉米 500g",
+                "pack_qty": 500.0,
+                "count": 1,
+                "unit_price": 3.5,
+                "free": 0
+              }
+            ],
+            "list_cost": 3.5,
+            "cost": 3.5,
+            "coupons": [],
+            "category": "vegetable"
+          },
+          {
+            "ingredient": "cucumber",
+            "name": "黄瓜",
+            "unit": "g",
+            "need": 806,
+            "bought_qty": 1000.0,
+            "packs": [
+              {
+                "label": "黄瓜 500g",
+                "pack_qty": 500.0,
+                "count": 2,
+                "unit_price": 3.5,
+                "free": 0
+              }
+            ],
+            "list_cost": 7.0,
+            "cost": 7.0,
+            "coupons": [],
+            "category": "vegetable"
+          },
+          {
+            "ingredient": "eggplant",
+            "name": "茄子",
+            "unit": "g",
+            "need": 390,
+            "bought_qty": 500.0,
+            "packs": [
+              {
+                "label": "茄子 500g",
+                "pack_qty": 500.0,
+                "count": 1,
+                "unit_price": 4.0,
+                "free": 0
+              }
+            ],
+            "list_cost": 4.0,
+            "cost": 4.0,
+            "coupons": [],
+            "category": "vegetable"
+          },
+          {
+            "ingredient": "napa_cabbage",
+            "name": "大白菜",
+            "unit": "g",
+            "need": 936,
+            "bought_qty": 1000.0,
+            "packs": [
+              {
+                "label": "大白菜 1000g",
+                "pack_qty": 1000.0,
+                "count": 1,
+                "unit_price": 3.5,
+                "free": 0
+              }
+            ],
+            "list_cost": 3.5,
+            "cost": 3.5,
+            "coupons": [],
+            "category": "vegetable"
+          },
+          {
+            "ingredient": "potato",
+            "name": "土豆",
+            "unit": "g",
+            "need": 280,
+            "bought_qty": 500.0,
+            "packs": [
+              {
+                "label": "土豆 500g",
+                "pack_qty": 500.0,
+                "count": 1,
+                "unit_price": 2.5,
+                "free": 0
+              }
+            ],
+            "list_cost": 2.5,
+            "cost": 2.5,
+            "coupons": [],
+            "category": "vegetable"
+          },
+          {
+            "ingredient": "tomato",
+            "name": "番茄",
+            "unit": "g",
+            "need": 1248,
+            "bought_qty": 1500.0,
+            "packs": [
+              {
+                "label": "番茄 500g",
+                "pack_qty": 500.0,
+                "count": 3,
+                "unit_price": 4.0,
+                "free": 0
+              }
+            ],
+            "list_cost": 12.0,
+            "cost": 12.0,
+            "coupons": [],
+            "category": "vegetable"
+          }
+        ],
+        "list_subtotal": 110.5,
+        "subtotal": 107.7,
+        "order_discounts": [],
+        "delivery_fee": 0.0,
+        "total": 107.7
+      }
+    ],
+    "unavailable": [],
+    "check_pantry_staples": [
+      {
+        "ingredient": "oil",
+        "name": "食用油"
+      },
+      {
+        "ingredient": "salt",
+        "name": "食盐"
+      },
+      {
+        "ingredient": "soy_sauce",
+        "name": "生抽"
+      },
+      {
+        "ingredient": "starch",
+        "name": "玉米淀粉"
+      },
+      {
+        "ingredient": "sugar",
+        "name": "白砂糖"
+      },
+      {
+        "ingredient": "vinegar",
+        "name": "香醋"
+      }
+    ]
+  },
+  "pantry_used": [
+    {
+      "ingredient": "egg",
+      "name": "鸡蛋",
+      "qty": 4.0,
+      "unit": "pcs"
+    },
+    {
+      "ingredient": "potato",
+      "name": "土豆",
+      "qty": 500.0,
+      "unit": "g"
+    },
+    {
+      "ingredient": "rice",
+      "name": "大米",
+      "qty": 2106.0,
+      "unit": "g"
+    }
+  ],
+  "leftovers": [
+    {
+      "ingredient": "bread",
+      "name": "吐司面包",
+      "qty": 244.0,
+      "unit": "g",
+      "perishable": true,
+      "est_value": 6.04
+    },
+    {
+      "ingredient": "minced_pork",
+      "name": "猪肉末",
+      "qty": 162.0,
+      "unit": "g",
+      "perishable": true,
+      "est_value": 4.54
+    },
+    {
+      "ingredient": "egg",
+      "name": "鸡蛋",
+      "qty": 5.4,
+      "unit": "pcs",
+      "perishable": true,
+      "est_value": 4.32
+    },
+    {
+      "ingredient": "milk",
+      "name": "纯牛奶",
+      "qty": 230.0,
+      "unit": "ml",
+      "perishable": true,
+      "est_value": 3.22
+    },
+    {
+      "ingredient": "tofu",
+      "name": "北豆腐",
+      "qty": 440.0,
+      "unit": "g",
+      "perishable": true,
+      "est_value": 2.46
+    },
+    {
+      "ingredient": "tomato",
+      "name": "番茄",
+      "qty": 252.0,
+      "unit": "g",
+      "perishable": true,
+      "est_value": 2.02
+    },
+    {
+      "ingredient": "bok_choy",
+      "name": "小青菜",
+      "qty": 324.0,
+      "unit": "g",
+      "perishable": true,
+      "est_value": 1.94
+    },
+    {
+      "ingredient": "chili",
+      "name": "小米辣",
+      "qty": 63.6,
+      "unit": "g",
+      "perishable": true,
+      "est_value": 1.84
+    },
+    {
+      "ingredient": "corn",
+      "name": "甜玉米",
+      "qty": 240.0,
+      "unit": "g",
+      "perishable": true,
+      "est_value": 1.68
+    },
+    {
+      "ingredient": "carrot",
+      "name": "胡萝卜",
+      "qty": 324.0,
+      "unit": "g",
+      "perishable": true,
+      "est_value": 1.62
+    },
+    {
+      "ingredient": "cucumber",
+      "name": "黄瓜",
+      "qty": 194.0,
+      "unit": "g",
+      "perishable": true,
+      "est_value": 1.36
+    },
+    {
+      "ingredient": "potato",
+      "name": "土豆",
+      "qty": 220.0,
+      "unit": "g",
+      "perishable": true,
+      "est_value": 1.1
+    },
+    {
+      "ingredient": "scallion",
+      "name": "小葱",
+      "qty": 135.6,
+      "unit": "g",
+      "perishable": true,
+      "est_value": 1.08
+    },
+    {
+      "ingredient": "eggplant",
+      "name": "茄子",
+      "qty": 110.0,
+      "unit": "g",
+      "perishable": true,
+      "est_value": 0.88
+    },
+    {
+      "ingredient": "bean_sprouts",
+      "name": "绿豆芽",
+      "qty": 64.0,
+      "unit": "g",
+      "perishable": true,
+      "est_value": 0.26
+    },
+    {
+      "ingredient": "napa_cabbage",
+      "name": "大白菜",
+      "qty": 64.0,
+      "unit": "g",
+      "perishable": true,
+      "est_value": 0.22
+    },
+    {
+      "ingredient": "garlic",
+      "name": "大蒜",
+      "qty": 174.6,
+      "unit": "g",
+      "perishable": false,
+      "est_value": 2.79
+    },
+    {
+      "ingredient": "noodles",
+      "name": "挂面",
+      "qty": 84.0,
+      "unit": "g",
+      "perishable": false,
+      "est_value": 1.09
+    },
+    {
+      "ingredient": "millet",
+      "name": "小米",
+      "qty": 84.0,
+      "unit": "g",
+      "perishable": false,
+      "est_value": 0.84
+    },
+    {
+      "ingredient": "rice",
+      "name": "大米",
+      "qty": 894.0,
+      "unit": "g",
+      "perishable": false,
+      "est_value": 0.0
+    }
+  ],
+  "savings": {
+    "baseline_total": 204.8,
+    "final_total": 137.5,
+    "steps": [
+      {
+        "key": "pantry",
+        "label": "先用家里存货",
+        "amount": 16.9
+      },
+      {
+        "key": "stores",
+        "label": "多店比价分单",
+        "amount": 47.6
+      },
+      {
+        "key": "item_coupons",
+        "label": "单品券/促销叠加",
+        "amount": 2.8
+      },
+      {
+        "key": "order_coupons",
+        "label": "满减/包邮",
+        "amount": 0.0
+      }
+    ],
+    "baseline_definition": "同一份菜单在平时常去的商店按最划算包装购买，不用家中存货、不用任何优惠券。"
+  },
+  "coupons": {
+    "used": [
+      {
+        "id": "c4",
+        "label": "北豆腐 8折",
+        "store": "wet_market"
+      }
+    ],
+    "unused": [
+      {
+        "id": "c1",
+        "label": "满100减15",
+        "reason": "订单小计¥29.80未达门槛¥100，凑单不划算"
+      },
+      {
+        "id": "c2",
+        "label": "鸡蛋 第2件半价",
+        "reason": "其他商店更便宜"
+      },
+      {
+        "id": "c3",
+        "label": "纯牛奶 买2送1",
+        "reason": "其他商店更便宜"
+      }
+    ]
+  },
+  "excluded_recipes": {
+    "kung_pao_chicken": "diet: peanut"
+  },
+  "warnings": [
+    "“香菜”不在食材库中，现有菜谱都不使用它。"
+  ],
+  "outputs": {
+    "markdown": "# 一周省钱买菜计划\n> ⚠️ 示例数据：商店名称与价格均为演示用的虚构数值，并非任何真实商店的真实或当前价格。请按你常去的商店修改（CSV 或 JSON）。\n\n| 项目 | 数值 |\n|---|---|\n| 每餐份量（成人当量） | 2.6 |\n| 在家用餐 | 16 |\n| 周预算 | ¥220.00 |\n| 优化后花费 | ¥137.50 |\n| 预算状态 | ✅ 预算内，剩余 ¥82.50 |\n| 未优化基准 | ¥204.80 |\n| 共节省 | ¥67.30 (32.9%) |\n| 人均每餐 | ¥3.31 |\n\n## 省钱明细\n- 先用家里存货: ¥16.90\n- 多店比价分单: ¥47.60\n- 单品券/促销叠加: ¥2.80\n- 满减/包邮: ¥0.00\n- 基准定义：同一份菜单在平时常去的商店按最划算包装购买，不用家中存货、不用任何优惠券。\n\n## 一周菜单\n| 日期 | 餐次 | 菜品 | 估算成本 |\n|---|---|---|---|\n| 周一 11-23 | 早餐 | 小米粥配水煮蛋 | ¥3.12 |\n| 周一 11-23 | 晚餐 | 番茄烧豆腐、醋溜白菜、米饭 | ¥6.42 |\n| 周二 11-24 | 早餐 | 小米粥配拍黄瓜 | ¥2.58 |\n| 周二 11-24 | 晚餐 | 肉末茄子、清炒小青菜、米饭 | ¥10.03 |\n| 周三 11-25 | 早餐 | 小米粥配水煮蛋 | ¥3.12 |\n| 周三 11-25 | 晚餐 | 麻婆豆腐、醋溜白菜、米饭 | ¥7.29 |\n| 周四 11-26 | 早餐 | 小米粥配拍黄瓜 | ¥2.58 |\n| 周四 11-26 | 晚餐 | 番茄炒蛋、清炒豆芽、米饭 | ¥7.70 |\n| 周五 11-27 | 早餐 | 青菜鸡蛋面 | ¥5.47 |\n| 周五 11-27 | 晚餐 | 胡萝卜炒蛋、酸辣土豆丝、米饭 | ¥6.60 |\n| 周六 11-28 | 早餐 | 吐司煎蛋配牛奶 | ¥13.22 |\n| 周六 11-28 | 午餐 | 番茄烧豆腐、拍黄瓜、米饭 | ¥7.76 |\n| 周六 11-28 | 晚餐 | 番茄炒蛋、玉米胡萝卜丁、米饭 | ¥8.32 |\n| 周日 11-29 | 早餐 | 青菜鸡蛋面 | ¥5.47 |\n| 周日 11-29 | 午餐 | 胡萝卜炒蛋、酸辣土豆丝、米饭 | ¥6.60 |\n| 周日 11-29 | 晚餐 | 麻婆豆腐、清炒豆芽、米饭 | ¥7.63 |\n\n## 购物清单\n### 示例超市A — ¥29.80\n| 食材 | 需要 | 购买 | 原价→到手 | 优惠 |\n|---|---|---|---|---|\n| 小米辣 | 37g | 小米辣 100g ×1 | ¥2.90 → ¥2.90 | — |\n| 纯牛奶 | 520ml | 纯牛奶 250ml ×3 | ¥10.50 → ¥10.50 | — |\n| 吐司面包 | 156g | 吐司面包 400g ×1 | ¥9.90 → ¥9.90 | — |\n| 挂面 | 416g | 挂面 500g ×1 | ¥6.50 → ¥6.50 | — |\n\n小计 ¥29.80\n\n### 示例菜市场 — ¥107.70\n| 食材 | 需要 | 购买 | 原价→到手 | 优惠 |\n|---|---|---|---|---|\n| 大蒜 | 76g | 大蒜 250g ×1 | ¥4.00 → ¥4.00 | — |\n| 小葱 | 115g | 小葱 250g ×1 | ¥2.00 → ¥2.00 | — |\n| 小米 | 416g | 小米 500g ×1 | ¥5.00 → ¥5.00 | — |\n| 猪肉末 | 338g | 猪肉末 500g ×1 | ¥14.00 → ¥14.00 | — |\n| 鸡蛋 | 25枚 | 鸡蛋 15枚 ×2 | ¥24.00 → ¥24.00 | — |\n| 北豆腐 | 1.56kg | 北豆腐 500g ×4 | ¥14.00 → ¥11.20 | 北豆腐 8折 |\n| 绿豆芽 | 936g | 绿豆芽 500g ×2 | ¥4.00 → ¥4.00 | — |\n| 小青菜 | 676g | 小青菜 500g ×2 | ¥6.00 → ¥6.00 | — |\n| 胡萝卜 | 676g | 胡萝卜 500g ×2 | ¥5.00 → ¥5.00 | — |\n| 甜玉米 | 260g | 甜玉米 500g ×1 | ¥3.50 → ¥3.50 | — |\n| 黄瓜 | 806g | 黄瓜 500g ×2 | ¥7.00 → ¥7.00 | — |\n| 茄子 | 390g | 茄子 500g ×1 | ¥4.00 → ¥4.00 | — |\n| 大白菜 | 936g | 大白菜 1000g ×1 | ¥3.50 → ¥3.50 | — |\n| 土豆 | 280g | 土豆 500g ×1 | ¥2.50 → ¥2.50 | — |\n| 番茄 | 1.25kg | 番茄 500g ×3 | ¥12.00 → ¥12.00 | — |\n\n小计 ¥107.70\n\n**请确认家里有这些调味品（未计入花费）：** 食用油、食盐、生抽、玉米淀粉、白砂糖、香醋\n\n## 用掉的家中存货\n- 鸡蛋 4枚\n- 土豆 500g\n- 大米 2.11kg\n\n## 本周剩余（下周优先用）\n- 吐司面包 244g（易坏）\n- 猪肉末 162g（易坏）\n- 鸡蛋 5枚（易坏）\n- 纯牛奶 230ml（易坏）\n- 北豆腐 440g（易坏）\n- 番茄 252g（易坏）\n- 小青菜 324g（易坏）\n- 小米辣 64g（易坏）\n- 甜玉米 240g（易坏）\n- 胡萝卜 324g（易坏）\n- 黄瓜 194g（易坏）\n- 土豆 220g（易坏）\n- 小葱 136g（易坏）\n- 茄子 110g（易坏）\n- 绿豆芽 64g（易坏）\n- 大白菜 64g（易坏）\n- 大蒜 175g\n- 挂面 84g\n- 小米 84g\n- 大米 894g\n\n## 未用上的优惠\n- 满100减15 (订单小计¥29.80未达门槛¥100，凑单不划算)\n- 鸡蛋 第2件半价 (其他商店更便宜)\n- 纯牛奶 买2送1 (其他商店更便宜)\n\n## 提示\n- “香菜”不在食材库中，现有菜谱都不使用它。\n",
+    "xiaohongshu_note": {
+      "title": "3口之家一周买菜¥138 省¥67💰",
+      "body": "💰本周战绩：3口人 · 16顿在家吃 · 实付¥137.50（预算¥220）\n📉比不优化少花¥67.30（32.9%），人均每餐¥3.31\n\n✨省钱秘诀\n1️⃣ 多店比价分单 省¥47.60\n2️⃣ 先用家里存货 省¥16.90\n3️⃣ 单品券/促销叠加 省¥2.80\n🎟️用上的券：北豆腐 8折\n\n🍳一周晚餐\n周一：番茄烧豆腐+醋溜白菜\n周二：肉末茄子+清炒小青菜\n周三：麻婆豆腐+醋溜白菜\n周四：番茄炒蛋+清炒豆芽\n周五：胡萝卜炒蛋+酸辣土豆丝\n周六：番茄炒蛋+玉米胡萝卜丁\n周日：麻婆豆腐+清炒豆芽\n\n♻️剩余食材下周先用：吐司面包、猪肉末、鸡蛋、纯牛奶、北豆腐\n\n💬你家一周买菜花多少？评论区说说你的省钱招，我更新进下周清单～\n（注：价格为示例数据，实际以你所在商店为准）\n\n#省钱攻略 #一周菜谱 #买菜省钱 #优惠券叠加 #居家过日子 #小红书Skill创新赛 #2026华为开发者大赛",
+      "hashtags": [
+        "#省钱攻略",
+        "#一周菜谱",
+        "#买菜省钱",
+        "#优惠券叠加",
+        "#居家过日子",
+        "#小红书Skill创新赛",
+        "#2026华为开发者大赛"
+      ],
+      "title_chars": 18,
+      "body_chars": 399,
+      "limits": {
+        "title": 20,
+        "body": 1000
+      }
+    }
+  }
+}

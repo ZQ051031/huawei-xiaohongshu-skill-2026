@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ZQ051031/huawei-xiaohongshu-skill-2026/skills/smart-grocery-saver/schemas/input.schema.json",
+  "title": "Smart Grocery Saver input",
+  "description": "One week of household grocery planning. Every field is optional; defaults are 2 adults, 7 dinners, budget 300 CNY, all sample stores, max 2 stores.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "household": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "adults": {"type": "integer", "minimum": 0, "maximum": 20},
+        "children": {"type": "integer", "minimum": 0, "maximum": 20},
+        "child_portion": {"type": "number", "minimum": 0.1, "maximum": 1.5, "description": "Portion size of a child relative to an adult (default 0.6)."}
+      }
+    },
+    "budget": {
+      "type": "object", "additionalProperties": false,
+      "properties": {"weekly": {"type": "number", "minimum": 1}, "currency": {"type": "string"}}
+    },
+    "meals": {
+      "type": "object", "additionalProperties": false,
+      "description": "Per meal: a count 0-7 (breakfast/dinner use days 1..N, lunch uses the last N days, i.e. weekend first) or an explicit list of day numbers 1-7.",
+      "properties": {
+        "breakfast": {"anyOf": [{"type": "integer", "minimum": 0, "maximum": 7}, {"type": "array", "items": {"type": "integer", "minimum": 1, "maximum": 7}}]},
+        "lunch": {"anyOf": [{"type": "integer", "minimum": 0, "maximum": 7}, {"type": "array", "items": {"type": "integer", "minimum": 1, "maximum": 7}}]},
+        "dinner": {"anyOf": [{"type": "integer", "minimum": 0, "maximum": 7}, {"type": "array", "items": {"type": "integer", "minimum": 1, "maximum": 7}}]}
+      }
+    },
+    "dishes_per_meal": {"type": "integer", "enum": [1, 2, 3], "description": "1 = main only, 2 = main + vegetable side, 3 = + soup. Rice is added to every lunch/dinner."},
+    "diet": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "restrictions": {"type": "array", "items": {"type": "string", "enum": ["vegetarian", "vegan", "pescatarian", "no_pork", "no_beef", "no_seafood", "shellfish_free", "gluten_free", "lactose_free", "nut_free", "egg_free", "soy_free", "no_spicy"]}},
+        "allergies": {"type": "array", "items": {"type": "string"}, "description": "Allergen tags (egg, dairy, gluten, peanut, soy, shellfish, fish) or Chinese names (花生, 虾, 牛奶...)."},
+        "dislikes": {"type": "array", "items": {"type": "string"}, "description": "Ingredient names/ids or recipe names/ids to avoid."},
+        "favorites": {"type": "array", "items": {"type": "string"}, "description": "Recipe names/ids to include when possible (e.g. from comment feedback)."}
+      }
+    },
+    "pantry": {
+      "type": "array",
+      "description": "What you already have at home. Objects {ingredient, qty} or strings like '鸡蛋:6' / 'rice:2000'. Quantities use the ingredient unit (g, ml, pcs).",
+      "items": {"anyOf": [
+        {"type": "string", "minLength": 2},
+        {"type": "object", "required": ["ingredient", "qty"], "additionalProperties": false,
+         "properties": {"ingredient": {"type": "string"}, "qty": {"type": "number", "minimum": 0}}}
+      ]}
+    },
+    "assume_staples": {"type": "boolean", "description": "If true (default) oil, salt, soy sauce, vinegar, sugar and starch are assumed to be at home and not costed."},
+    "stores": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "allowed": {"type": ["array", "null"], "items": {"type": "string"}},
+        "max_stores": {"type": "integer", "minimum": 1, "maximum": 6},
+        "default_store": {"type": ["string", "null"], "description": "Where you would normally shop; used for the savings baseline."},
+        "extra_store_cost": {"type": "number", "minimum": 0, "description": "Your time cost (CNY) per additional store visited; trades savings against convenience."}
+      }
+    },
+    "coupons": {
+      "type": "array",
+      "items": {
+        "type": "object", "required": ["type"],
+        "properties": {
+          "id": {"type": "string"}, "label": {"type": "string"},
+          "type": {"type": "string", "enum": ["percent_off", "fixed_off_item", "buy_x_get_y", "nth_percent", "threshold_off"]},
+          "store": {"type": "string"}, "ingredients": {"type": "array", "items": {"type": "string"}},
+          "categories": {"type": "array", "items": {"type": "string"}},
+          "percent": {"type": ["number", "null"]}, "amount": {"type": "number"}, "threshold": {"type": "number"},
+          "buy": {"type": "integer"}, "get": {"type": "integer"}, "n": {"type": "integer"}, "max_uses": {"type": "integer"},
+          "repeatable": {"type": "boolean"}, "max_discount": {"type": ["number", "null"]},
+          "excludes_discounted": {"type": "boolean"}, "stackable": {"type": "boolean"},
+          "valid_until": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"}, "source_text": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "coupon_texts": {"type": "array", "items": {"type": "string"}, "description": "Coupon text pasted from apps/flyers, e.g. '示例超市A：满100减15', 'app_b: 鸡蛋 买2送1', '豆腐 8折'."},
+    "price_overrides": {
+      "type": "array",
+      "description": "Your real prices. Replaces the catalog product with the same store+ingredient+pack_qty, or adds a new pack size. remove=true deletes it.",
+      "items": {"type": "object", "required": ["store", "ingredient", "pack_qty"],
+        "properties": {"store": {"type": "string"}, "ingredient": {"type": "string"}, "pack_qty": {"type": "number", "minimum": 0.001},
+                       "price": {"type": "number", "minimum": 0}, "label": {"type": ["string", "null"]}, "remove": {"type": "boolean"}}}
+    },
+    "start_date": {"type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+    "variety": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "max_repeats": {"type": "integer", "minimum": 1, "maximum": 7},
+        "variety_weight": {"type": "number", "minimum": 0, "description": "CNY-equivalent penalty for repeating dishes / proteins. 0 = cheapest possible."},
+        "min_meat_ratio": {"type": "number", "minimum": 0, "maximum": 1, "description": "Target share of mains with meat/fish when the diet allows it (default 0.4)."}
+      }
+    },
+    "output": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "lang": {"type": "string", "enum": ["zh", "en"]},
+        "include_contest_tags": {"type": "boolean"},
+        "extra_hashtags": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

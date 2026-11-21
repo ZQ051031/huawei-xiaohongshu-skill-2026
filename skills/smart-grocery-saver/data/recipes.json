@@ -1,0 +1,592 @@
+{
+ "_notice": "Per-portion ingredient quantities (adult portion) in each ingredient's base unit (g / ml / pcs). Home-cooking estimates, not nutrition data.",
+ "recipes": [
+  {
+   "id": "tomato_egg",
+   "name_zh": "番茄炒蛋",
+   "name_en": "Tomato & egg stir-fry",
+   "role": "main",
+   "minutes": 15,
+   "ingredients": {
+    "egg": 1.5,
+    "tomato": 120,
+    "scallion": 5,
+    "oil": 10,
+    "salt": 2,
+    "sugar": 3
+   },
+   "tags": []
+  },
+  {
+   "id": "kung_pao_chicken",
+   "name_zh": "宫保鸡丁",
+   "name_en": "Kung pao chicken",
+   "role": "main",
+   "minutes": 25,
+   "ingredients": {
+    "chicken_breast": 120,
+    "peanut": 15,
+    "cucumber": 40,
+    "chili": 3,
+    "scallion": 5,
+    "soy_sauce": 10,
+    "vinegar": 5,
+    "sugar": 5,
+    "starch": 5,
+    "oil": 12
+   },
+   "tags": []
+  },
+  {
+   "id": "green_pepper_pork",
+   "name_zh": "青椒肉丝",
+   "name_en": "Shredded pork with green pepper",
+   "role": "main",
+   "minutes": 20,
+   "ingredients": {
+    "pork_lean": 90,
+    "green_pepper": 100,
+    "garlic": 5,
+    "soy_sauce": 8,
+    "starch": 4,
+    "oil": 10
+   },
+   "tags": []
+  },
+  {
+   "id": "sweet_sour_ribs",
+   "name_zh": "糖醋排骨",
+   "name_en": "Sweet & sour ribs",
+   "role": "main",
+   "minutes": 50,
+   "ingredients": {
+    "pork_ribs": 150,
+    "sugar": 15,
+    "vinegar": 10,
+    "soy_sauce": 8,
+    "ginger": 3,
+    "oil": 8
+   },
+   "tags": []
+  },
+  {
+   "id": "beef_potato",
+   "name_zh": "土豆炖牛腩",
+   "name_en": "Braised beef with potato",
+   "role": "main",
+   "minutes": 90,
+   "ingredients": {
+    "beef": 110,
+    "potato": 120,
+    "carrot": 50,
+    "onion": 30,
+    "soy_sauce": 10,
+    "ginger": 3,
+    "oil": 8
+   },
+   "tags": []
+  },
+  {
+   "id": "steamed_fish",
+   "name_zh": "清蒸鱼柳",
+   "name_en": "Steamed fish fillet",
+   "role": "main",
+   "minutes": 20,
+   "ingredients": {
+    "fish_fillet": 150,
+    "ginger": 5,
+    "scallion": 8,
+    "soy_sauce": 10,
+    "oil": 6
+   },
+   "tags": []
+  },
+  {
+   "id": "boiled_shrimp",
+   "name_zh": "蒜香白灼虾仁",
+   "name_en": "Garlic poached shrimp",
+   "role": "main",
+   "minutes": 15,
+   "ingredients": {
+    "shrimp": 130,
+    "ginger": 3,
+    "garlic": 5,
+    "soy_sauce": 8
+   },
+   "tags": []
+  },
+  {
+   "id": "mapo_tofu",
+   "name_zh": "麻婆豆腐",
+   "name_en": "Mapo tofu",
+   "role": "main",
+   "minutes": 20,
+   "ingredients": {
+    "tofu": 150,
+    "minced_pork": 40,
+    "chili": 4,
+    "garlic": 4,
+    "scallion": 4,
+    "soy_sauce": 6,
+    "starch": 4,
+    "oil": 10
+   },
+   "tags": []
+  },
+  {
+   "id": "homestyle_tofu",
+   "name_zh": "家常豆腐",
+   "name_en": "Home-style tofu",
+   "role": "main",
+   "minutes": 20,
+   "ingredients": {
+    "tofu": 150,
+    "green_pepper": 40,
+    "mushroom": 40,
+    "soy_sauce": 8,
+    "starch": 3,
+    "oil": 10
+   },
+   "tags": []
+  },
+  {
+   "id": "mushroom_chicken",
+   "name_zh": "香菇滑鸡",
+   "name_en": "Mushroom chicken",
+   "role": "main",
+   "minutes": 30,
+   "ingredients": {
+    "chicken_thigh": 130,
+    "mushroom": 60,
+    "ginger": 3,
+    "soy_sauce": 10,
+    "starch": 4,
+    "oil": 8
+   },
+   "tags": []
+  },
+  {
+   "id": "eggplant_minced_pork",
+   "name_zh": "肉末茄子",
+   "name_en": "Eggplant with minced pork",
+   "role": "main",
+   "minutes": 25,
+   "ingredients": {
+    "eggplant": 150,
+    "minced_pork": 50,
+    "garlic": 6,
+    "soy_sauce": 8,
+    "sugar": 3,
+    "oil": 15
+   },
+   "tags": []
+  },
+  {
+   "id": "beef_onion",
+   "name_zh": "洋葱炒牛肉",
+   "name_en": "Beef & onion stir-fry",
+   "role": "main",
+   "minutes": 20,
+   "ingredients": {
+    "beef": 100,
+    "onion": 100,
+    "soy_sauce": 8,
+    "starch": 4,
+    "oil": 10
+   },
+   "tags": []
+  },
+  {
+   "id": "braised_chicken_thigh",
+   "name_zh": "土豆烧鸡腿",
+   "name_en": "Braised chicken thigh with potato",
+   "role": "main",
+   "minutes": 40,
+   "ingredients": {
+    "chicken_thigh": 160,
+    "potato": 60,
+    "soy_sauce": 12,
+    "sugar": 5,
+    "ginger": 3,
+    "oil": 8
+   },
+   "tags": []
+  },
+  {
+   "id": "shrimp_egg",
+   "name_zh": "虾仁滑蛋",
+   "name_en": "Shrimp & soft scrambled eggs",
+   "role": "main",
+   "minutes": 15,
+   "ingredients": {
+    "shrimp": 70,
+    "egg": 1.5,
+    "scallion": 5,
+    "oil": 10,
+    "salt": 2
+   },
+   "tags": []
+  },
+  {
+   "id": "carrot_egg",
+   "name_zh": "胡萝卜炒蛋",
+   "name_en": "Carrot & egg stir-fry",
+   "role": "main",
+   "minutes": 15,
+   "ingredients": {
+    "carrot": 100,
+    "egg": 1.5,
+    "oil": 10,
+    "salt": 2
+   },
+   "tags": []
+  },
+  {
+   "id": "tomato_tofu",
+   "name_zh": "番茄烧豆腐",
+   "name_en": "Tomato braised tofu",
+   "role": "main",
+   "minutes": 20,
+   "ingredients": {
+    "tomato": 120,
+    "tofu": 150,
+    "scallion": 5,
+    "oil": 8,
+    "salt": 2,
+    "sugar": 3
+   },
+   "tags": []
+  },
+  {
+   "id": "chicken_broccoli",
+   "name_zh": "西兰花炒鸡胸",
+   "name_en": "Chicken breast with broccoli",
+   "role": "main",
+   "minutes": 20,
+   "ingredients": {
+    "chicken_breast": 110,
+    "broccoli": 120,
+    "garlic": 5,
+    "soy_sauce": 6,
+    "starch": 4,
+    "oil": 8
+   },
+   "tags": []
+  },
+  {
+   "id": "pork_bean_sprouts",
+   "name_zh": "豆芽炒肉丝",
+   "name_en": "Pork with bean sprouts",
+   "role": "main",
+   "minutes": 15,
+   "ingredients": {
+    "pork_lean": 80,
+    "bean_sprouts": 120,
+    "scallion": 5,
+    "soy_sauce": 8,
+    "oil": 10
+   },
+   "tags": []
+  },
+  {
+   "id": "garlic_broccoli",
+   "name_zh": "蒜蓉西兰花",
+   "name_en": "Garlic broccoli",
+   "role": "side",
+   "minutes": 10,
+   "ingredients": {
+    "broccoli": 150,
+    "garlic": 8,
+    "oil": 8,
+    "salt": 2
+   },
+   "tags": []
+  },
+  {
+   "id": "stir_fried_bok_choy",
+   "name_zh": "清炒小青菜",
+   "name_en": "Stir-fried bok choy",
+   "role": "side",
+   "minutes": 8,
+   "ingredients": {
+    "bok_choy": 180,
+    "garlic": 5,
+    "oil": 8,
+    "salt": 2
+   },
+   "tags": []
+  },
+  {
+   "id": "vinegar_cabbage",
+   "name_zh": "醋溜白菜",
+   "name_en": "Vinegar napa cabbage",
+   "role": "side",
+   "minutes": 10,
+   "ingredients": {
+    "napa_cabbage": 180,
+    "vinegar": 8,
+    "sugar": 3,
+    "starch": 3,
+    "oil": 8,
+    "salt": 2
+   },
+   "tags": []
+  },
+  {
+   "id": "hot_sour_potato",
+   "name_zh": "酸辣土豆丝",
+   "name_en": "Hot & sour shredded potato",
+   "role": "side",
+   "minutes": 15,
+   "ingredients": {
+    "potato": 150,
+    "chili": 3,
+    "vinegar": 8,
+    "oil": 10,
+    "salt": 2
+   },
+   "tags": []
+  },
+  {
+   "id": "smashed_cucumber",
+   "name_zh": "拍黄瓜",
+   "name_en": "Smashed cucumber salad",
+   "role": "side",
+   "minutes": 5,
+   "ingredients": {
+    "cucumber": 150,
+    "garlic": 6,
+    "vinegar": 8,
+    "soy_sauce": 5,
+    "salt": 1
+   },
+   "tags": []
+  },
+  {
+   "id": "garlic_spinach",
+   "name_zh": "蒜蓉菠菜",
+   "name_en": "Garlic spinach",
+   "role": "side",
+   "minutes": 8,
+   "ingredients": {
+    "spinach": 180,
+    "garlic": 6,
+    "oil": 8,
+    "salt": 2
+   },
+   "tags": []
+  },
+  {
+   "id": "di_san_xian",
+   "name_zh": "地三鲜",
+   "name_en": "Di san xian (eggplant, potato, pepper)",
+   "role": "side",
+   "minutes": 25,
+   "ingredients": {
+    "eggplant": 80,
+    "potato": 80,
+    "green_pepper": 50,
+    "garlic": 5,
+    "soy_sauce": 8,
+    "starch": 4,
+    "oil": 18
+   },
+   "tags": []
+  },
+  {
+   "id": "stir_fried_bean_sprouts",
+   "name_zh": "清炒豆芽",
+   "name_en": "Stir-fried bean sprouts",
+   "role": "side",
+   "minutes": 8,
+   "ingredients": {
+    "bean_sprouts": 180,
+    "scallion": 5,
+    "vinegar": 5,
+    "oil": 8,
+    "salt": 2
+   },
+   "tags": []
+  },
+  {
+   "id": "oyster_lettuce",
+   "name_zh": "蒜蓉生菜",
+   "name_en": "Garlic lettuce",
+   "role": "side",
+   "minutes": 8,
+   "ingredients": {
+    "lettuce": 180,
+    "garlic": 5,
+    "soy_sauce": 8,
+    "oil": 6
+   },
+   "tags": []
+  },
+  {
+   "id": "mushroom_bok_choy",
+   "name_zh": "香菇青菜",
+   "name_en": "Bok choy with shiitake",
+   "role": "side",
+   "minutes": 12,
+   "ingredients": {
+    "bok_choy": 150,
+    "mushroom": 50,
+    "oil": 8,
+    "salt": 2,
+    "starch": 2
+   },
+   "tags": []
+  },
+  {
+   "id": "carrot_corn",
+   "name_zh": "玉米胡萝卜丁",
+   "name_en": "Corn & carrot medley",
+   "role": "side",
+   "minutes": 12,
+   "ingredients": {
+    "corn": 100,
+    "carrot": 60,
+    "oil": 8,
+    "salt": 2
+   },
+   "tags": []
+  },
+  {
+   "id": "tomato_egg_soup",
+   "name_zh": "番茄蛋花汤",
+   "name_en": "Tomato egg-drop soup",
+   "role": "soup",
+   "minutes": 15,
+   "ingredients": {
+    "tomato": 80,
+    "egg": 0.5,
+    "scallion": 3,
+    "salt": 2,
+    "starch": 3
+   },
+   "tags": []
+  },
+  {
+   "id": "cabbage_tofu_soup",
+   "name_zh": "白菜豆腐汤",
+   "name_en": "Napa cabbage & tofu soup",
+   "role": "soup",
+   "minutes": 20,
+   "ingredients": {
+    "napa_cabbage": 80,
+    "tofu": 60,
+    "ginger": 2,
+    "salt": 2
+   },
+   "tags": []
+  },
+  {
+   "id": "corn_rib_soup",
+   "name_zh": "玉米排骨汤",
+   "name_en": "Corn & pork rib soup",
+   "role": "soup",
+   "minutes": 60,
+   "ingredients": {
+    "pork_ribs": 80,
+    "corn": 100,
+    "carrot": 40,
+    "ginger": 3,
+    "salt": 2
+   },
+   "tags": []
+  },
+  {
+   "id": "spinach_egg_soup",
+   "name_zh": "菠菜蛋汤",
+   "name_en": "Spinach egg soup",
+   "role": "soup",
+   "minutes": 10,
+   "ingredients": {
+    "spinach": 60,
+    "egg": 0.5,
+    "salt": 2
+   },
+   "tags": []
+  },
+  {
+   "id": "oat_milk",
+   "name_zh": "牛奶燕麦",
+   "name_en": "Oats with milk",
+   "role": "breakfast",
+   "minutes": 5,
+   "ingredients": {
+    "oats": 40,
+    "milk": 250
+   },
+   "tags": []
+  },
+  {
+   "id": "egg_noodles",
+   "name_zh": "青菜鸡蛋面",
+   "name_en": "Egg & greens noodles",
+   "role": "breakfast",
+   "minutes": 12,
+   "ingredients": {
+    "noodles": 80,
+    "egg": 1,
+    "bok_choy": 40,
+    "scallion": 3,
+    "salt": 1,
+    "soy_sauce": 5
+   },
+   "tags": []
+  },
+  {
+   "id": "millet_congee_egg",
+   "name_zh": "小米粥配水煮蛋",
+   "name_en": "Millet congee with boiled egg",
+   "role": "breakfast",
+   "minutes": 25,
+   "ingredients": {
+    "millet": 40,
+    "egg": 1
+   },
+   "tags": []
+  },
+  {
+   "id": "toast_egg_milk",
+   "name_zh": "吐司煎蛋配牛奶",
+   "name_en": "Toast, fried egg & milk",
+   "role": "breakfast",
+   "minutes": 10,
+   "ingredients": {
+    "bread": 60,
+    "egg": 1,
+    "milk": 200,
+    "oil": 5
+   },
+   "tags": []
+  },
+  {
+   "id": "millet_congee_cucumber",
+   "name_zh": "小米粥配拍黄瓜",
+   "name_en": "Millet congee with cucumber salad",
+   "role": "breakfast",
+   "minutes": 25,
+   "ingredients": {
+    "millet": 40,
+    "cucumber": 80,
+    "vinegar": 3,
+    "garlic": 2,
+    "salt": 1
+   },
+   "tags": []
+  },
+  {
+   "id": "steamed_rice",
+   "name_zh": "米饭",
+   "name_en": "Steamed rice",
+   "role": "staple",
+   "minutes": 30,
+   "ingredients": {
+    "rice": 90
+   },
+   "tags": []
+  }
+ ]
+}
