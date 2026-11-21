@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Smart Grocery Saver CLI (Python 3.9+, standard library only).
+"""Smart Grocery Saver CLI (Python 3.10+, standard library only).
 
 Examples:
   python3 grocery_saver.py plan --input ../examples/family_of_three.json --format markdown

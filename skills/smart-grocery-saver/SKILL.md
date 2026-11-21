@@ -6,7 +6,7 @@ metadata:
   version: "1.0.0"
   author: ZQ051031
   language: zh-CN, en
-  runtime: python>=3.9 (standard library only, no network)
+  runtime: python>=3.10 (standard library only, no network)
   entrypoint: scripts/grocery_saver.py
   manifest: skill.json
 ---

@@ -39,7 +39,7 @@ skills/smart-grocery-saver/        ← the Skill package (this folder is what ge
   skill.json                       ← machine-readable manifest: commands, input/output contract, exit codes
   schemas/input.schema.json        ← request JSON Schema
   scripts/grocery_saver.py         ← CLI: plan | parse-coupons | export-prices | validate
-  scripts/saver/                   ← engine (pure Python stdlib, 3.9+, no network)
+  scripts/saver/                   ← engine (pure Python stdlib, 3.10+, no network)
     data.py      validation, catalog, aliases, pantry parsing, price overrides
     coupons.py   coupon model, Chinese/English coupon-text parser, stacking math
     shopping.py  pack-size + coupon + multi-store basket optimiser
@@ -54,7 +54,7 @@ skills/smart-grocery-saver/        ← the Skill package (this folder is what ge
 demo/server.py, demo/index.html    ← local web UI (stdlib http.server, no build step)
 tests/                             ← 46 unittest tests (engine, coupons, CLI, HTTP API)
 tools/package_skill.py             ← builds dist/smart-grocery-saver-<ver>.zip and checks the 30-file / 40 MB limits
-.github/workflows/ci.yml           ← runs tests on Python 3.9 / 3.11 / 3.13
+.github/workflows/ci.yml           ← runs tests on Python 3.10 / 3.12 / 3.13
 ```
 
 ## Architecture
@@ -86,7 +86,7 @@ Details: [`references/optimization.md`](skills/smart-grocery-saver/references/op
 
 ## Run it
 
-Requires Python ≥ 3.9 and nothing else.
+Requires Python ≥ 3.10 and nothing else (tested on 3.10.12 locally and 3.10/3.12/3.13 in CI).
 
 ```bash
 git clone https://github.com/ZQ051031/huawei-xiaohongshu-skill-2026.git
